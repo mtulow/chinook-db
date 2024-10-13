@@ -1,0 +1,56 @@
+Country,City,Genre,Purchases,Sales
+Argentina,Buenos Aires,Rock,9,8.91
+Argentina,Buenos Aires,Alternative & Punk,9,8.91
+Australia,Sidney,Rock,22,21.78
+Austria,Vienne,Rock,15,14.85
+Belgium,Brussels,Rock,21,20.79
+Brazil,Brasília,Rock,11,10.89
+Brazil,São José dos Campos,Rock,14,13.86
+Brazil,Rio de Janeiro,Rock,16,15.84
+Brazil,Rio de Janeiro,Latin,16,15.84
+Brazil,São Paulo,Rock,40,39.6
+Canada,Montréal,Metal,10,9.9
+Canada,Vancouver,Rock,12,11.88
+Canada,Edmonton,Rock,13,12.87
+Canada,Halifax,Latin,13,12.87
+Canada,Winnipeg,Latin,14,13.86
+Canada,Ottawa,Rock,19,18.81
+Canada,Yellowknife,Rock,19,18.81
+Canada,Toronto,Rock,25,24.75
+Chile,Santiago,Rock,9,8.91
+Czech Republic,Prague,Rock,25,24.75
+Denmark,Copenhagen,Rock,21,20.79
+Finland,Helsinki,Rock,18,17.82
+France,Lyon,Rock,10,9.9
+France,Bordeaux,Metal,14,13.86
+France,Dijon,Rock,18,17.82
+France,Paris,Rock,30,29.7
+Germany,Frankfurt,Rock,11,10.89
+Germany,Stuttgart,Rock,17,16.83
+Germany,Berlin,Rock,34,33.66
+Hungary,Budapest,Rock,11,10.89
+India,Bangalore,Rock,12,11.88
+India,Delhi,Rock,13,12.87
+Ireland,Dublin,Rock,12,11.88
+Italy,Rome,Rock,18,17.82
+Netherlands,Amsterdam,Rock,18,17.82
+Norway,Oslo,Rock,17,16.83
+Poland,Warsaw,Rock,22,21.78
+Portugal,Lisbon,Rock,15,14.85
+Portugal,Porto,Rock,16,15.84
+Spain,Madrid,Rock,22,21.78
+Sweden,Stockholm,Latin,12,11.88
+USA,Redmond,Rock,8,7.92
+USA,Reno,Rock,9,8.91
+USA,Boston,Latin,12,11.88
+USA,Chicago,Rock,12,11.88
+USA,Orlando,Metal,12,11.88
+USA,Fort Worth,Rock,14,13.86
+USA,Madison,Rock,14,13.86
+USA,Cupertino,Rock,15,14.85
+USA,Tucson,Rock,16,15.84
+USA,Salt Lake City,Rock,17,16.83
+USA,New York,Rock,19,18.81
+USA,Mountain View,Rock,21,20.79
+United Kingdom,Edinburgh ,Rock,11,10.89
+United Kingdom,London,Rock,26,25.74

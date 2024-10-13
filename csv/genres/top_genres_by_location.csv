@@ -1,0 +1,56 @@
+Country,State,PostalCode,City,Genre,Purchases,Sales
+Argentina,,1106,Buenos Aires,Rock,9,8.91
+Argentina,,1106,Buenos Aires,Alternative & Punk,9,8.91
+Australia,NSW,2010,Sidney,Rock,22,21.78
+Austria,,1010,Vienne,Rock,15,14.85
+Belgium,,1000,Brussels,Rock,21,20.79
+Brazil,DF,71020-677,Brasília,Rock,11,10.89
+Brazil,RJ,20040-020,Rio de Janeiro,Rock,16,15.84
+Brazil,RJ,20040-020,Rio de Janeiro,Latin,16,15.84
+Brazil,SP,12227-000,São José dos Campos,Rock,14,13.86
+Brazil,SP,01007-010,São Paulo,Rock,40,39.6
+Canada,AB,T6G 2C7,Edmonton,Rock,13,12.87
+Canada,NS,B3S 1C5,Halifax,Latin,13,12.87
+Canada,QC,H2G 1A7,Montréal,Metal,10,9.9
+Canada,ON,K2P 1L7,Ottawa,Rock,19,18.81
+Canada,ON,M6J 1V1,Toronto,Rock,25,24.75
+Canada,BC,V6C 1G8,Vancouver,Rock,12,11.88
+Canada,MB,R3L 2B9,Winnipeg,Latin,14,13.86
+Canada,NT,X1A 1N6,Yellowknife,Rock,19,18.81
+Chile,,,Santiago,Rock,9,8.91
+Czech Republic,,14300,Prague,Rock,25,24.75
+Denmark,,1720,Copenhagen,Rock,21,20.79
+Finland,,00530,Helsinki,Rock,18,17.82
+France,,33000,Bordeaux,Metal,14,13.86
+France,,21000,Dijon,Rock,18,17.82
+France,,69002,Lyon,Rock,10,9.9
+France,,75002,Paris,Rock,30,29.7
+Germany,,10789,Berlin,Rock,34,33.66
+Germany,,60316,Frankfurt,Rock,11,10.89
+Germany,,70174,Stuttgart,Rock,17,16.83
+Hungary,,H-1073,Budapest,Rock,11,10.89
+India,,560001,Bangalore,Rock,12,11.88
+India,,110017,Delhi,Rock,13,12.87
+Ireland,Dublin,,Dublin,Rock,12,11.88
+Italy,RM,00192,Rome,Rock,18,17.82
+Netherlands,VV,1016,Amsterdam,Rock,18,17.82
+Norway,,0171,Oslo,Rock,17,16.83
+Poland,,00-358,Warsaw,Rock,22,21.78
+Portugal,,,Lisbon,Rock,15,14.85
+Portugal,,,Porto,Rock,16,15.84
+Spain,,28015,Madrid,Rock,22,21.78
+Sweden,,11230,Stockholm,Latin,12,11.88
+USA,MA,2113,Boston,Latin,12,11.88
+USA,IL,60611,Chicago,Rock,12,11.88
+USA,CA,95014,Cupertino,Rock,15,14.85
+USA,TX,76110,Fort Worth,Rock,14,13.86
+USA,WI,53703,Madison,Rock,14,13.86
+USA,CA,94040-111,Mountain View,Rock,21,20.79
+USA,NY,10012-2612,New York,Rock,19,18.81
+USA,FL,32801,Orlando,Metal,12,11.88
+USA,WA,98052-8300,Redmond,Rock,8,7.92
+USA,NV,89503,Reno,Rock,9,8.91
+USA,UT,84102,Salt Lake City,Rock,17,16.83
+USA,AZ,85719,Tucson,Rock,16,15.84
+United Kingdom,,EH4 1HH,Edinburgh ,Rock,11,10.89
+United Kingdom,,SW1V 3EN,London,Rock,26,25.74

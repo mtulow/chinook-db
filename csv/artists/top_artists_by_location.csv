@@ -1,0 +1,130 @@
+Country,State,PostalCode,City,Artist,Purchases,Sales
+Argentina,,1106,Buenos Aires,Titãs,14,13.86
+Argentina,,1106,Buenos Aires,Tim Maia,14,13.86
+Australia,NSW,2010,Sidney,Van Halen,9,8.91
+Australia,NSW,2010,Sidney,UB40,9,8.91
+Australia,NSW,2010,Sidney,U2,9,8.91
+Austria,,1010,Vienne,Marvin Gaye,11,11.89
+Belgium,,1000,Brussels,Smashing Pumpkins,13,12.87
+Brazil,DF,71020-677,Brasília,Göteborgs Symfoniker & Neeme Järvi,20,19.8
+Brazil,DF,71020-677,Brasília,"Equale Brass Ensemble, John Eliot Gardiner & Munich Monteverdi Orchestra and Choir",20,19.8
+Brazil,DF,71020-677,Brasília,Emerson String Quartet,20,19.8
+Brazil,DF,71020-677,Brasília,Amy Winehouse,20,19.8
+Brazil,DF,71020-677,Brasília,Accept,20,19.8
+Brazil,DF,71020-677,Brasília,"Academy of St. Martin in the Fields, Sir Neville Marriner & Thurston Dart",20,19.8
+Brazil,DF,71020-677,Brasília,AC/DC,20,19.8
+Brazil,RJ,20040-020,Rio de Janeiro,Soundgarden,16,15.84
+Brazil,RJ,20040-020,Rio de Janeiro,Smashing Pumpkins,16,15.84
+Brazil,SP,12227-000,São José dos Campos,Ozzy Osbourne,15,15.85
+Brazil,SP,12227-000,São José dos Campos,Os Paralamas Do Sucesso,15,15.85
+Brazil,SP,01007-010,São Paulo,Paul D'Ianno,25,24.75
+Brazil,SP,01007-010,São Paulo,Passengers,25,24.75
+Brazil,SP,01007-010,São Paulo,Page & Plant,25,24.75
+Canada,AB,T6G 2C7,Edmonton,João Suplicy,19,18.81
+Canada,AB,T6G 2C7,Edmonton,Jota Quest,19,18.81
+Canada,AB,T6G 2C7,Edmonton,Jorge Ben,19,18.81
+Canada,AB,T6G 2C7,Edmonton,Joe Satriani,19,18.81
+Canada,AB,T6G 2C7,Edmonton,Jimi Hendrix,19,18.81
+Canada,AB,T6G 2C7,Edmonton,Jamiroquai,19,18.81
+Canada,AB,T6G 2C7,Edmonton,James Brown,19,18.81
+Canada,AB,T6G 2C7,Edmonton,JET,19,18.81
+Canada,NS,B3S 1C5,Halifax,Nirvana,18,17.82
+Canada,NS,B3S 1C5,Halifax,Mötley Crüe,18,17.82
+Canada,NS,B3S 1C5,Halifax,Mônica Marianno,18,17.82
+Canada,NS,B3S 1C5,Halifax,Motörhead,18,17.82
+Canada,NS,B3S 1C5,Halifax,Milton Nascimento,18,17.82
+Canada,NS,B3S 1C5,Halifax,Miles Davis,18,17.82
+Canada,NS,B3S 1C5,Halifax,Metallica,18,17.82
+Canada,QC,H2G 1A7,Montréal,Smashing Pumpkins,21,22.79
+Canada,ON,K2P 1L7,Ottawa,Spyro Gyra,16,15.84
+Canada,ON,K2P 1L7,Ottawa,Kiss,16,15.84
+Canada,ON,K2P 1L7,Ottawa,Green Day,16,15.84
+Canada,ON,M6J 1V1,Toronto,U2,14,13.86
+Canada,BC,V6C 1G8,Vancouver,Antônio Carlos Jobim,17,17.83
+Canada,MB,R3L 2B9,Winnipeg,Djavan,17,16.83
+Canada,NT,X1A 1N6,Yellowknife,R.E.M. Feat. Kate Pearson,21,20.79
+Canada,NT,X1A 1N6,Yellowknife,R.E.M.,21,20.79
+Canada,NT,X1A 1N6,Yellowknife,Queen,21,20.79
+Chile,,,Santiago,Chicago Symphony Orchestra & Fritz Reiner,15,17.85
+Czech Republic,,14300,Prague,Titãs,24,27.76
+Czech Republic,,14300,Prague,Lost,24,27.76
+Czech Republic,,14300,Prague,Battlestar Galactica,24,27.76
+Denmark,,1720,Copenhagen,Various Artists,15,14.85
+Denmark,,1720,Copenhagen,Cássia Eller,15,14.85
+Denmark,,1720,Copenhagen,Creedence Clearwater Revival,15,14.85
+Finland,,00530,Helsinki,Zeca Pagodinho,13,13.87
+Finland,,00530,Helsinki,Vinícius De Moraes,13,13.87
+Finland,,00530,Helsinki,Velvet Revolver,13,13.87
+Finland,,00530,Helsinki,Van Halen,13,13.87
+Finland,,00530,Helsinki,UB40,13,13.87
+France,,33000,Bordeaux,The Tea Party,15,15.85
+France,,21000,Dijon,Led Zeppelin,18,18.82
+France,,69002,Lyon,The Tea Party,22,21.78
+France,,75009,Paris,Raimundos,30,31.7
+France,,75009,Paris,R.E.M. Feat. Kate Pearson,30,31.7
+France,,75009,Paris,R.E.M.,30,31.7
+Germany,,10789,Berlin,Black Sabbath,21,20.79
+Germany,,60316,Frankfurt,Led Zeppelin,15,16.85
+Germany,,60316,Frankfurt,Kiss,15,16.85
+Germany,,70174,Stuttgart,The Who,17,16.83
+Hungary,,H-1073,Budapest,O Terço,18,21.82
+India,,560001,Bangalore,Red Hot Chili Peppers,19,19.81
+India,,560001,Bangalore,Raul Seixas,19,19.81
+India,,560001,Bangalore,Raimundos,19,19.81
+India,,560001,Bangalore,R.E.M. Feat. Kate Pearson,19,19.81
+India,,560001,Bangalore,R.E.M.,19,19.81
+India,,110017,Delhi,The Office,15,15.85
+Ireland,Dublin,,Dublin,The Tea Party,11,11.89
+Italy,RM,00192,Rome,Faith No More,16,15.84
+Italy,RM,00192,Rome,Eric Clapton,16,15.84
+Netherlands,VV,1016,Amsterdam,Skank,15,15.85
+Netherlands,VV,1016,Amsterdam,Santana,15,15.85
+Netherlands,VV,1016,Amsterdam,Rush,15,15.85
+Netherlands,VV,1016,Amsterdam,Red Hot Chili Peppers,15,15.85
+Netherlands,VV,1016,Amsterdam,Raul Seixas,15,15.85
+Netherlands,VV,1016,Amsterdam,Lenny Kravitz,15,15.85
+Norway,,0171,Oslo,Smashing Pumpkins,18,18.82
+Poland,,00-358,Warsaw,Iron Maiden,17,16.83
+Portugal,,,Lisbon,U2,20,21.8
+Portugal,,,Lisbon,Scorpions,20,21.8
+Portugal,,,Lisbon,Ozzy Osbourne,20,21.8
+Portugal,,,Lisbon,Battlestar Galactica (Classic),20,21.8
+Portugal,,,Lisbon,Aquaman,20,21.8
+Portugal,,,Porto,U2,8,7.92
+Spain,,28015,Madrid,Tim Maia,15,14.85
+Spain,,28015,Madrid,The Who,15,14.85
+Sweden,,11230,Stockholm,Chico Science & Nação Zumbi,16,16.84
+Sweden,,11230,Stockholm,Chico Buarque,16,16.84
+Sweden,,11230,Stockholm,Caetano Veloso,16,16.84
+USA,MA,2113,Boston,U2,19,18.81
+USA,IL,60611,Chicago,Planet Hemp,19,20.81
+USA,CA,95014,Cupertino,The Office,16,16.84
+USA,TX,76110,Fort Worth,Guns N' Roses,11,13.89
+USA,TX,76110,Fort Worth,Green Day,11,13.89
+USA,WI,53703,Madison,U2,15,15.85
+USA,CA,94043-1351,Mountain View,Metallica,23,23.77
+USA,NY,10012-2612,New York,The Black Crowes,15,14.85
+USA,NY,10012-2612,New York,"Terry Bozzio, Tony Levin & Steve Stevens",15,14.85
+USA,NY,10012-2612,New York,System Of A Down,15,14.85
+USA,NY,10012-2612,New York,Stone Temple Pilots,15,14.85
+USA,NY,10012-2612,New York,Stevie Ray Vaughan & Double Trouble,15,14.85
+USA,NY,10012-2612,New York,Spyro Gyra,15,14.85
+USA,FL,32801,Orlando,Metallica,16,16.84
+USA,WA,98052-8300,Redmond,Titãs,13,13.87
+USA,WA,98052-8300,Redmond,Tim Maia,13,13.87
+USA,WA,98052-8300,Redmond,Battlestar Galactica,13,13.87
+USA,NV,89503,Reno,Passengers,16,15.84
+USA,NV,89503,Reno,Page & Plant,16,15.84
+USA,NV,89503,Reno,Ozzy Osbourne,16,15.84
+USA,NV,89503,Reno,Os Paralamas Do Sucesso,16,15.84
+USA,UT,84102,Salt Lake City,Judas Priest,14,15.86
+USA,AZ,85719,Tucson,The Rolling Stones,17,16.83
+USA,AZ,85719,Tucson,The Police,17,16.83
+USA,AZ,85719,Tucson,The Doors,17,16.83
+USA,AZ,85719,Tucson,The Cult,17,16.83
+USA,AZ,85719,Tucson,The Clash,17,16.83
+USA,AZ,85719,Tucson,The Black Crowes,17,16.83
+United Kingdom,,EH4 1HH,Edinburgh ,Os Paralamas Do Sucesso,19,18.81
+United Kingdom,,EH4 1HH,Edinburgh ,Olodum,19,18.81
+United Kingdom,,N1 5LH,London,Lenny Kravitz,26,25.74
+United Kingdom,,N1 5LH,London,Legião Urbana,26,25.74
