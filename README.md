@@ -1,9 +1,65 @@
 # SQL Project: Chinook Database
 
+---
+
 SQL Project for [Udacity's Business Analytics Nanodegree](https://www.udacity.com/enrollment/nd098-oneten-t2).
 
 The Chinook Database holds information about a music store. For this project, you will be assisting the Chinook team with understanding the media in their store, their customers and employees, and their invoice information.
 
+---
+---
+
+## Queries
+
+### 1. Top Genres
+
+#### What are the top genres in each country, state, zipcode, and city?
+
+| __Locations__ | __SQL File__ | __CSV File__ |
+| --------- | -------- | -------- |
+| `country` | [top_genres_by_country.sql](./data/sql/genres/top_genres_by_country.sql) | [top_genres_by_country.csv](./data/csv/genres/top_genres_by_country.csv) |
+| `country`, `city` | [top_genres_by_cc.sql](./data/sql/genres/top_genres_by_city.sql) | [top_genres_by_cc.csv](./data/csv/genres/top_genres_by_city.csv) |
+| `country`, `state`, `zipcode`, `city` | [top_genres_by_location.sql](./data/sql/genres/top_genres_by_location.sql) | [top_genres_by_location.csv](./data/csv/genres/top_genres_by_location.csv) |
+
+### 2. Top Artists
+
+#### Who are the top artists in each country, state, zipcode, and city?
+
+| __Locations__ | __SQL File__ | __CSV File__ |
+| --------- | -------- | -------- |
+| `country` | [top_artists_by_country.sql](./data/sql/artists/top_artists_by_country.sql) | [top_artists_by_country.csv](./data/csv/artists/top_artists_by_country.csv) |
+| `country`, `city` | [top_artists_by_cc.sql](./data/sql/artists/top_artists_by_cc.sql) | [top_artists_by_cc.csv](./data/csv/artists/top_artists_by_cc.csv) |
+| `country`, `state`, `zipcode`, `city` | [top_artists_by_location.sql](./data/sql/artists/top_artists_by_location.sql) | [top_artists_by_location.csv](./data/csv/artists/top_artists_by_location.csv) |
+
+### 3. Top Albums
+
+#### What are the top albums in each country, state, zipcode, and city?
+
+| __Locations__ | __SQL File__ | __CSV File__ |
+| --------- | -------- | -------- |
+| `country` | [top_albums_by_country.sql](./data/sql/albums/top_albums_by_country.sql) | [top_albums_by_country.csv](./data/csv/albums/top_albums_by_country.csv) |
+| `country`, `city` | [top_albums_by_cc.sql](./data/sql/albums/top_albums_by_cc.sql) | [top_albums_by_cc.csv](./data/csv/albums/top_albums_by_cc.csv) |
+| `country`, `state`, `zipcode`, `city` | [top_albums_by_location.sql](./data/sql/albums/top_albums_by_location.sql) | [top_albums_by_location.csv](./data/csv/albums/top_albums_by_location.csv) |
+
+### 4. Top Tracks
+
+#### What are the top performing tracks in each country, state, zipcode, and city?
+
+| __Locations__ | __SQL File__ | __CSV File__ |
+| --------- | -------- | -------- |
+| `country` | [top_tracks_by_country.sql](./data/sql/tracks/top_tracks_by_country.sql) | [top_tracks_by_country.csv](./data/csv/tracks/top_tracks_by_country.csv) |
+| `country`, `city` | [top_tracks_by_cc.sql](./data/sql/tracks/top_tracks_by_cc.sql) | [top_tracks_by_cc.csv](./data/csv/tracks/top_tracks_by_cc.csv) |
+| `country`, `state`, `zipcode`, `city` | [top_tracks_by_location.sql](./data/sql/tracks/top_tracks_by_location.sql) | [top_tracks_by_location.csv](./data/csv/tracks/top_tracks_by_location.csv) |
+
+### 5. Top Employees
+
+#### Who are the top performing employees?
+
+| __Locations__ | __SQL File__ | __CSV File__ |
+| --------- | -------- | -------- |
+|  | [top_performing_employees.sql](./data/sql/top_performing_employees.sql) | [top_performing_employees.csv](./data/csv/top_performing_employees.csv) |
+
+---
 ---
 
 ## Tables
@@ -146,134 +202,6 @@ Relationship:
 | `BillingCountry` | Billing country of the invoice |
 | `BillingPostalCode` | Billing postal code of the invoice |
 | `Total` | Total amount of the invoice |
-
----
-
-## Queries
-
-### Query 1: Who are the top artists in each country?
-
-#### SQL File: `sql/top_artists_by_country.sql`
-
-```sql
-WITH CountryPopularity AS (
-    SELECT
-        -- Customer columns
-        c.Country,
-        -- Artist columns
-        ar.Name Artist,
-        -- Album columns
-        COUNT(ar.ArtistId) OVER
-            (PARTITION BY c.Country ORDER BY DATE(i.InvoiceDate)) Purchases,
-        -- Invoice columns
-        SUM(il.UnitPrice*il.Quantity) OVER
-            (PARTITION BY c.Country ORDER BY DATE(i.InvoiceDate)) Sales, 
-        -- Rank each row by country
-        dense_rank() OVER
-            (PARTITION BY c.Country ORDER BY DATE(i.InvoiceDate) DESC) CountryRank
-    FROM InvoiceLine il
-    JOIN Invoice i ON il.InvoiceId = i.InvoiceId
-    JOIN Customer c ON i.CustomerId = c.CustomerId
-    JOIN Track tr ON il.TrackId = tr.TrackId
-    JOIN Album al ON tr.AlbumId = al.AlbumId
-    JOIN Artist ar ON al.ArtistId = ar.ArtistId
-    GROUP BY Country, Artist
-    ORDER BY Country, CountryRank
-)
-SELECT
-    cp.Country,
-    cp.Artist,
-    cp.Purchases,
-    ROUND(cp.Sales, 2) Sales
-FROM CountryPopularity cp
-JOIN (
-    SELECT Country,
-           MAX(Purchases) AS MaxPurchases,
-           MAX(Sales) AS MaxSales
-    FROM CountryPopularity
-    GROUP BY Country
-) mc ON cp.Country = mc.Country AND cp.Purchases = mc.MaxPurchases AND cp.Sales = mc.MaxSales
-;
-```
-
-#### CSV File: [`top_artists_by_country`](csv/top_artists_by_country.csv)
-
----
-
-### Query 2: Who are the top artists in each city?
-
-#### SQL File: [top artists by city](sql/top_artists_by_city.sql)
-
-```sql
--- Who are the top artists in each city? (Purchases & Sales)
-WITH CityPopularity AS (
-    SELECT
-        -- Customer columns
-        c.Country,
-        c.City,
-        -- Artist columns
-        ar.Name Artist,
-        -- Album columns
-        COUNT(ar.ArtistId) OVER
-            (PARTITION BY c.City ORDER BY DATE(i.InvoiceDate)) Purchases,
-        -- Invoice columns
-        SUM(il.UnitPrice*il.Quantity) OVER
-            (PARTITION BY c.City ORDER BY DATE(i.InvoiceDate)) Sales, 
-        -- Rank each row by city
-        dense_rank() OVER
-            (PARTITION BY c.City ORDER BY DATE(i.InvoiceDate) DESC) CityRank
-    FROM InvoiceLine il
-    JOIN Invoice i ON il.InvoiceId = i.InvoiceId
-    JOIN Customer c ON i.CustomerId = c.CustomerId
-    JOIN Track tr ON il.TrackId = tr.TrackId
-    JOIN Album al ON tr.AlbumId = al.AlbumId
-    JOIN Artist ar ON al.ArtistId = ar.ArtistId
-	GROUP BY City, Artist
-)
-SELECT
-    cp.Country,
-    cp.City,
-    cp.Artist,
-    cp.Purchases,
-    ROUND(cp.Sales, 2) Sales
-FROM CityPopularity cp
-JOIN (
-    SELECT City,
-           MAX(Purchases) AS MaxPurchases,
-           MAX(Sales) AS MaxSales
-    FROM CityPopularity
-    GROUP BY City
-) mc ON cp.City = mc.City AND cp.Purchases = mc.MaxPurchases AND cp.Sales = mc.MaxSales
-ORDER BY Country, CityRank;
-```
-
-#### CSV File: [`top_artists_by_city`](csv/top_artists_by_city.csv)
-
----
-
-### Query 3: What are the top genres in each country?
-
-#### SQL File: [top genres by country](sql/top_genres_by_country.sql)
-
-#### CSV File: [`top_genres_by_country`](csv/top_genres_by_country.csv)
-
----
-
-### Query 4: What are the top genres in each city?
-
-#### SQL File: [top genres by city](sql/top_genres_by_city.sql)
-
-#### CSV File: [`top_genres_by_city`](csv/top_genres_by_city.csv)
-
----
-
-### Query 5: Who are the top performing employees?
-
-#### SQL File: [top performing employees](sql/top_performing_employees.sql)
-
-#### CSV File: [`top_performing_employees`](csv/top_performing_employees.csv)
-
----
 
 ---
 ---
