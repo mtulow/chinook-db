@@ -1,0 +1,42 @@
+"GenreId","GenreName","Country","Purchases","Sales"
+7,"Latin","Argentina",7,6.930000000000001
+10,"Soundtrack","Argentina",7,6.930000000000001
+12,"Easy Listening","Argentina",7,6.930000000000001
+8,"Reggae","Australia",6,5.94
+9,"Pop","Austria",9,10.91
+14,"R&B/Soul","Austria",9,10.91
+24,"Classical","Austria",9,10.91
+14,"R&B/Soul","Belgium",4,3.96
+10,"Soundtrack","Brazil",13,13.870000000000001
+11,"Bossa Nova","Canada",16,17.84
+24,"Classical","Chile",12,15.88
+18,"Science Fiction","Czech Republic",12,14.88
+4,"Alternative & Punk","Denmark",5,4.95
+3,"Metal","Finland",7,7.930000000000001
+8,"Reggae","Finland",7,7.930000000000001
+6,"Blues","France",18,20.819999999999997
+18,"Science Fiction","Germany",14,16.86
+19,"TV Shows","Germany",14,16.86
+21,"Drama","Germany",14,16.86
+6,"Blues","Hungary",11,14.89
+19,"TV Shows","India",10,11.9
+4,"Alternative & Punk","Ireland",8,9.92
+6,"Blues","Italy",6,5.94
+9,"Pop","Netherlands",7,7.930000000000001
+20,"Sci Fi & Fantasy","Netherlands",7,7.930000000000001
+4,"Alternative & Punk","Norway",8,8.92
+1,"Rock","Poland",5,4.95
+2,"Jazz","Poland",5,4.95
+4,"Alternative & Punk","Poland",5,4.95
+6,"Blues","Poland",5,4.95
+2,"Jazz","Portugal",13,14.870000000000001
+6,"Blues","Portugal",13,14.870000000000001
+13,"Heavy Metal","Portugal",13,14.870000000000001
+2,"Jazz","Spain",7,6.930000000000001
+7,"Latin","Spain",7,6.930000000000001
+2,"Jazz","Sweden",7,7.930000000000001
+7,"Latin","Sweden",7,7.930000000000001
+16,"World","Sweden",7,7.930000000000001
+17,"Hip Hop/Rap","USA",22,26.77999999999999
+9,"Pop","United Kingdom",10,9.9
+17,"Hip Hop/Rap","United Kingdom",10,9.9

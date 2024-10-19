@@ -1,8 +1,8 @@
--- Top tracks by country
+-- Top 5 tracks per country
 WITH TrackPerformance AS (
     SELECT
         /* Rank each row by country */
-        rank() OVER
+        row_number() OVER
             (PARTITION BY c.Country ORDER BY i.InvoiceDate DESC) AS TrackRank,
 
         /* Track columns */
@@ -40,5 +40,5 @@ SELECT
     ROUND(tp.Sales, 2) TrackSales
 
 FROM TrackPerformance tp
-WHERE TrackRank <= 1
+WHERE TrackRank <= 5
 ;
