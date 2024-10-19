@@ -22,6 +22,9 @@ WITH EmployeePerformance AS (
     ORDER BY i.InvoiceDate
 )
 SELECT
+    /* Date Columns */
+    DATE(ep.Year || '-' || ep.Month || '-01') Date,
+
     /* Rank employees by year, month, sales */
     row_number() OVER
         (PARTITION BY ep.Year, ep.Month ORDER BY ep.Total DESC) AS EmployeeRank,
@@ -30,14 +33,11 @@ SELECT
     ep.FirstName,
     ep.LastName,
 
-    /* Date Columns */
-    ep.Year,
-    ep.Month,
-
     /* Aggregate Columns */
     COUNT(ep.CustomerId) TotalCustomers,
     ROUND(SUM(ep.Total),2) TotalSales
 
 FROM EmployeePerformance ep
 GROUP BY ep.Year, ep.Month, ep.EmployeeId
-ORDER BY ep.Year, ep.Month;
+ORDER BY ep.Year, ep.Month
+;
