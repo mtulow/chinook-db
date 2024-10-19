@@ -1,44 +1,34 @@
--- Top tracks by country
-WITH TrackPerformance AS (
-    SELECT
-        /* Rank each row by country */
-        rank() OVER
-            (PARTITION BY c.Country ORDER BY i.InvoiceDate DESC) AS TrackRank,
-
-        /* Track columns */
-        t.TrackId,
-        t.Name TrackName,
-
+-- Top genre's per country
+WITH GenrePerformance AS (
+    SELECT 
+        /* Genre columns */
+        g.GenreId,
+        g.Name,
         /* Customer columns */
         c.Country,
-        
         /* InvoiceLine columns */
-        SUM(il.Quantity) OVER
-            (PARTITION BY c.Country ORDER BY i.InvoiceDate) AS Purchases,
-        SUM(il.UnitPrice*il.Quantity) OVER
-            (PARTITION BY c.Country ORDER BY i.InvoiceDate) AS Sales
-
-
+        COUNT(il.InvoiceLineId) AS Purchases
     FROM InvoiceLine il
-    JOIN Track t ON il.TrackId = t.TrackId
     JOIN Invoice i ON il.InvoiceId = i.InvoiceId
     JOIN Customer c ON i.CustomerId = c.CustomerId
+    JOIN Track t ON il.TrackId = t.TrackId
+    JOIN Genre g ON t.GenreId = g.GenreId
+    GROUP BY c.Country, g.GenreId, g.Name
 )
 SELECT
-    /* Rank column */
-    tp.TrackRank,
-    
-    /* Track columns */
-    tp.TrackId,
-    tp.TrackName,
-    
+    /* Genre columns */
+    gp.GenreId,
+    gp.Name,
+
     /* Location columns */
-    tp.Country,
+    gp.Country,
 
-    /* Aggregate columns */
-    tp.Purchases TrackPurchases,
-    ROUND(tp.Sales, 2) TrackSales
+    /* Aggregation columns */
+    gp.Purchases
 
-FROM TrackPerformance tp
-WHERE TrackRank <= 1
-;
+FROM GenrePerformance gp
+JOIN (
+    SELECT Country, MAX(Purchases) AS MaxPurchases
+    FROM GenrePerformance
+    GROUP BY Country
+) mp ON gp.Country = mp.Country AND gp.Purchases = mp.MaxPurchases;
