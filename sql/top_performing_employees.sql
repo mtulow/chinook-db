@@ -1,12 +1,12 @@
-/* Aggregate combined table by year, month, and employee */
--- GROUP BY table: 412 -> 171 rows
+/* Aggregate sub-query by year, month, and employee */
+-- Sub-query below returns 412 rows
 SELECT
     /* Invoice Columns */
     i.InvoiceId,
-    -- i.Total InvoiceTotal,
     DATE(i.InvoiceDate) InvoiceDate,
     STRFTIME('%Y', i.InvoiceDate) Year,
     STRFTIME('%m', i.InvoiceDate) Month,
+    i.Total,
 
     /* Employee Columns */
     e.EmployeeId,
@@ -14,11 +14,12 @@ SELECT
     e.FirstName EmployeeFirstName,
 
     /* Customer Columns */
-    COUNT(c.CustomerId) TotalCustomers,
-    SUM(i.Total) TotalSales
+    c.CustomerId
 
 FROM Invoice i
 JOIN Customer c ON i.CustomerId = c.CustomerId
 JOIN Employee e ON c.SupportRepId = e.EmployeeId
-GROUP BY Year, Month, e.EmployeeId
+-- GROUP BY Year, Month, e.EmployeeId
 ORDER BY i.InvoiceDate;
+
+
