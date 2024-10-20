@@ -1,4 +1,4 @@
-/* Ranked artists per country */
+/* Ranked artists by date */
 -- SUB-QUERY: Identify relevant tables and their columns
 SELECT
     /* InvoiceLine Columns */
@@ -14,7 +14,7 @@ SELECT
     DATE(i.InvoiceDate) InvoiceDate,
     STRFTIME('%Y', i.InvoiceDate) Year,
     STRFTIME('%m', i.InvoiceDate) Month,
-    i.BillingCountry Country,
+    -- i.BillingCountry Country,
     -- i.BillingCity City,
 
     /* Customer Columns */
@@ -26,5 +26,3 @@ JOIN Album al ON t.AlbumId = al.AlbumId
 JOIN Artist ar ON al.ArtistId = ar.ArtistId
 JOIN Invoice i ON il.InvoiceId = i.InvoiceId
 JOIN Customer c ON i.CustomerId = c.CustomerId;
-
-

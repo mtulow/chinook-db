@@ -27,18 +27,19 @@ SELECT
     /* Date Columns */
     DATE(ep.Year || '-' || ep.Month || '-01') Date,
 
+    /* Employee Columns */
+    ep.EmployeeId,
+    ep.FirstName || ' ' || ep.LastName Employee,
+    -- ep.FirstName,
+    -- ep.LastName,
+
     /* Rank employees by year, month, sales */
     row_number() OVER
         (PARTITION BY ep.Year, ep.Month ORDER BY ep.Total DESC) AS EmployeeRank,
 
-    /* Employee Columns */
-    ep.FirstName || ' ' || ep.LastName Employee,
-    ep.FirstName,
-    ep.LastName,
-
     /* Aggregate Columns */
-    COUNT(ep.CustomerId) TotalCustomers,
-    ROUND(SUM(ep.Total),2) TotalSales
+    COUNT(ep.CustomerId) Customers,
+    ROUND(SUM(ep.Total),2) Sales
 
 FROM EmployeePerformance ep
 GROUP BY ep.Year, ep.Month, ep.EmployeeId
