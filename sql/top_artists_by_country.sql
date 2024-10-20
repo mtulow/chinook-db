@@ -3,8 +3,8 @@
 SELECT
     /* InvoiceLine Columns */
     il.InvoiceLineId,
-    il.Quantity,
-    il.UnitPrice,
+    il.Quantity Purchases,
+    il.Quantity*il.UnitPrice Sales,
 
     /* Artist Columns */
     ar.ArtistId,
@@ -12,7 +12,10 @@ SELECT
 
     /* Invoice Columns */
     DATE(i.InvoiceDate) InvoiceDate,
-    i.BillingCountry,
+    STRFTIME('%Y', i.InvoiceDate) Year,
+    STRFTIME('%m', i.InvoiceDate) Month,
+    i.BillingCountry Country,
+    i.BillingCity City,
 
     /* Customer Columns */
     c.CustomerId
@@ -23,4 +26,3 @@ JOIN Album al ON t.AlbumId = al.AlbumId
 JOIN Artist ar ON al.ArtistId = ar.ArtistId
 JOIN Invoice i ON il.InvoiceId = i.InvoiceId
 JOIN Customer c ON i.CustomerId = c.CustomerId;
-

@@ -3,7 +3,6 @@ WITH EmployeePerformance AS (
     SELECT
         /* Invoice Columns */
         i.InvoiceId,
-        DATE(i.InvoiceDate) InvoiceDate,
         STRFTIME('%Y', i.InvoiceDate) Year,
         STRFTIME('%m', i.InvoiceDate) Month,
         i.Total,
@@ -22,6 +21,9 @@ WITH EmployeePerformance AS (
     ORDER BY i.InvoiceDate
 )
 SELECT
+    /* ID Columns */
+    row_number() OVER() AS Id,
+
     /* Date Columns */
     DATE(ep.Year || '-' || ep.Month || '-01') Date,
 
@@ -30,6 +32,7 @@ SELECT
         (PARTITION BY ep.Year, ep.Month ORDER BY ep.Total DESC) AS EmployeeRank,
 
     /* Employee Columns */
+    ep.FirstName || ' ' || ep.LastName Employee,
     ep.FirstName,
     ep.LastName,
 
