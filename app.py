@@ -1,67 +1,39 @@
 import os
-import re
+import sys
 import glob
-import string
 import sqlite3
 import openpyxl
 import pandas as pd
-from itertools import chain
-from collections import defaultdict
-from contextlib import contextmanager
 
 
-# ==
-# Utility Functions
-# ==
 
-def convert_snake_to_camel(text: str) -> str:
-    """Converts a text string from snake case to camel case.
 
-    Args:
-        text (str): The text string to convert.
-
-    Returns:
-        str: The converted text string in camel case.
-    """
-    components = text.split('_')
-    return components[0] + ''.join(x.title() for x in components[1:])
-
-@contextmanager
-def connect_to_sqlite(db_file: str = './chinook_db/chinook.db'):
-    """Connect to a sqlite3 database."""
-    conn = None
+def execute_read_script(sql_file: str, db_file: str = './chinook_db/chinook.db'):
+    """Run a SQL file in sqlite3."""
+    with sqlite3.connect(db_file) as conn:
+        with open(sql_file, 'r') as f:
+            df = pd.read_sql(f.read(), con=conn)
+            return df
+        
+def write_to_csv(df: pd.DataFrame, csv_file: str, verbose: bool = False):
+    """Writes a pandas.DataFrame to a csv file."""
     try:
-        conn = sqlite3.connect(db_file)
-        yield conn
-    finally:
-        if conn:
-            conn.close()
+        if verbose:
+            ui = input(f'Press Enter to write to csv file: {csv_file} ...')
+            if ui:
+                df.to_csv(csv_file,)
+                print('Success!')
+        else:
+            print('Writing to SQL script {} to CSV file {} ... ')
+            df.to_csv(csv_file,)
+            print('Success!')
 
-@contextmanager
-def get_sql_script(sql_file: str):
-    """Yield the contents of a SQL file."""
-    with open(sql_file, 'r') as f:
-        yield f.read()
+    except Exception as err:
+        print('Failed!')
+        print(err)
+        return
 
-# ==
-# I/O Functions
-# ==
-
-def load_sql_to_dataframe(sql_file: str, db_file: str = None) -> pd.DataFrame:
-    """Return a pandas.DataFrame from a sqlite3 script."""
-    # Default database file: ./chinook_db/chinook.db
-    db_file = db_file or './chinook_db/chinook.db'
-
-    # Connect to sqlite3 and get sql script
-    with connect_to_sqlite(db_file) as conn, \
-         get_sql_script(sql_file) as script:
-
-        # Read SQL script        
-        df = pd.read_sql_query(script, con=conn)
-
-    return df
-
-def write_to_excel(df: pd.DataFrame, sheet_name: str, xlsx_file: str) -> str:
+def write_to_spreadsheet(df: pd.DataFrame, sheet_name: str, xlsx_file: str) -> str:
     """Writes a pandas dataframe to an excel worksheet.
     
     Args:
@@ -69,7 +41,6 @@ def write_to_excel(df: pd.DataFrame, sheet_name: str, xlsx_file: str) -> str:
         sheet_name (str): Name of the sheet to write to.
         xlsx_file (str): Path to the excel file.
     """
-
     # Try to load the workbook. If it doesn't exist, create a new one.
     try:
         wb = openpyxl.load_workbook(xlsx_file)
@@ -99,45 +70,31 @@ def write_to_excel(df: pd.DataFrame, sheet_name: str, xlsx_file: str) -> str:
 
 
 def main():
-    # Get all sql files
-    sql_files = ('data/sql/albums/top_albums_by_location.sql',
-                 'data/sql/artists/top_artists_by_location.sql',
-                 'data/sql/genres/top_genres_by_location.sql',
-                 'data/sql/tracks/top_tracks_by_location.sql',
-                 'data/sql/employees/top_performing_employees.sql',)
-    
-    # Get all csv files
-    csv_files = map(lambda x: x.replace('sql', 'csv'), sql_files)
+    question_sets = map(sorted,
+        [glob.glob('data/sql/question_set_1/*.sql'),
+         glob.glob('data/sql/question_set_2/*.sql'),
+         glob.glob('data/sql/question_set_3/*.sql'),
+         glob.glob('data/sql/project/*.sql'),
+        ]
+    )
 
-    # Construct excel file path
-    xlsx_file = './data/excel/chinook.xlsx'
+    for question_set in question_sets:
 
-    # Iterate over sql files
-    for sql_file, csv_file in zip(sql_files, csv_files):
+        for script in question_set:
 
+            # Execute script and load results into dataframe
+            df = execute_read_script(script) 
 
-        # Connect to sqlite3
-        with connect_to_sqlite() as conn,\
-             get_sql_script(sql_file) as script:
-            
-            # Read data into pandas.DataFrame
-            df = pd.read_sql_query(script, con=conn)
-        
-        # Sheet name within spreadsheet
-        sheetname = convert_snake_to_camel(os.path.basename(csv_file).removesuffix('.csv'))
-        print(sheetname)
-        
-        # Write dataframe to excel spreadsheet
-        write_to_excel(df, sheetname, xlsx_file)
+            # # Write to csv file
+            # csv_file = script.replace('sql', 'csv')
+            # write_to_csv(df, csv_file)
 
-    # Open spreadsheet file
-    os.system(f'open {xlsx_file}')
+            # Write to spreadsheet
+            xlsx_file = os.path.dirname(script).replace('sql','xlsx')+'.xlsx'
+            sheet_name = os.path.basename(script).removesuffix('.sql')
+            write_to_spreadsheet(df, sheet_name, xlsx_file)
 
-
-            
-            
 if __name__ == '__main__':
     print()
     main()
     print()
-
