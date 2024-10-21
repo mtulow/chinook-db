@@ -68,14 +68,14 @@ def write_to_spreadsheet(df: pd.DataFrame, sheet_name: str, xlsx_file: str) -> s
 
     return xlsx_file
 
-
 def main():
-    question_sets = map(sorted,
-        [glob.glob('data/sql/question_set_1/*.sql'),
-         glob.glob('data/sql/question_set_2/*.sql'),
-         glob.glob('data/sql/question_set_3/*.sql'),
-         glob.glob('data/sql/project/*.sql'),
-        ]
+    """Run the application."""
+    question_sets = map(
+        sorted, [glob.glob('data/sql/question_set_1/*.sql'),
+                 glob.glob('data/sql/question_set_2/*.sql'),
+                 glob.glob('data/sql/question_set_3/*.sql'),
+                 glob.glob('data/sql/project/*.sql'),
+                 ]
     )
 
     for question_set in question_sets:
@@ -93,6 +93,8 @@ def main():
             xlsx_file = os.path.dirname(script).replace('sql','xlsx')+'.xlsx'
             sheet_name = os.path.basename(script).removesuffix('.sql')
             write_to_spreadsheet(df, sheet_name, xlsx_file)
+            # sheet_name = os.path.basename(os.path.dirname(script).replace('sql','xlsx'))+sheet_name
+            # write_to_spreadsheet(df, sheet_name, 'data/xlsx/project.xlsx')
 
 if __name__ == '__main__':
     print()

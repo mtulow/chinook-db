@@ -1,9 +1,9 @@
 /* Query: W */
 SELECT
     Name Track,
-    Milliseconds
+    Milliseconds/1000 Seconds
 FROM Track
 WHERE Milliseconds >= (SELECT AVG(Milliseconds) FROM Track)
-ORDER BY Milliseconds DESC
+ORDER BY Seconds DESC
 -- LIMIT 10
 ;
