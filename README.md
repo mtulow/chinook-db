@@ -77,11 +77,11 @@ The Chinook Database holds information about a music store. For this project, yo
 | --- | --- |
 | `AlbumId` | Unique identifier for each album |
 | `Title` | Title of the album |
-| `ArtistId` | Foreign key referencing the Artist table (`ArtistId`) |
+| `ArtistId` | Foreign key referencing the [Artist](#artist) table (`ArtistId`) |
 
 Relationship:
 
-- `ArtistId` in the __Album__ table is a foreign key linked to the `ArtistId` (primary key) in the __Artist__ table.
+- `ArtistId` in the [Album](#album) table is a foreign key linked to the `ArtistId` (primary key) in the [Artist](#artist) table.
 
 ### Track
 
@@ -89,9 +89,9 @@ Relationship:
 |:--------------- |:--------------- |
 | `TrackId` | Unique identifier for each track |
 | `Name` | Name of the track |
-| `AlbumId` | Foreign key referencing the Album table  (`AlbumId`) |
-| `MediaTypeId` | Foreign key referencing the MediaType table (`MediaTypeId`) |
-| `GenreId` | Foreign key referencing the Genre table  (`GenreId`) |
+| `AlbumId` | Foreign key referencing the [Album](#album) table  (`AlbumId`) |
+| `MediaTypeId` | Foreign key referencing the [MediaType](#mediatype) table (`MediaTypeId`) |
+| `GenreId` | Foreign key referencing the [Genre](#genre) table  (`GenreId`) |
 | `Composer` | Name of the composer |
 | `Milliseconds` | Duration of the track in milliseconds |
 | `Bytes` | Size of the track in bytes |
@@ -99,9 +99,9 @@ Relationship:
 
 Relationships:
 
-- `AlbumId` in the __Track__ table is a foreign key linked to the `AlbumId` (primary key) in the __Album__ table.
-- `MediaTypeId` in the __Track__ table is a foreign key linked to the `MediaTypeId` (primary key) in the __MediaType__ table.
-- `GenreId` in the __Track__ table is a foreign key linked to the `GenreId` (primary key) in the __Genre__ table.
+- `AlbumId` in the [Track](#track) table is a foreign key linked to the `AlbumId` (primary key) in the [Album](#album) table.
+- `MediaTypeId` in the [Track](#track) table is a foreign key linked to the `MediaTypeId` (primary key) in the [MediaType](#mediatype) table.
+- `GenreId` in the [Track](#track) table is a foreign key linked to the `GenreId` (primary key) in the [Genre](#genre) table.
 
 ### MediaType
 
@@ -121,13 +121,13 @@ Relationships:
 
 | __Column Name__ | __Description__ |
 | --- | --- |
-| `PlaylistId` | Foreign key referencing the __Playlist__ table (`PlaylistId`) |
-| `TrackId` | Foreign key referencing the __Track__ table (`TrackId`) |
+| `PlaylistId` | Foreign key referencing the [Playlist](#playlist) table (`PlaylistId`) |
+| `TrackId` | Foreign key referencing the [Track](#track) table (`TrackId`) |
 
 Relationship:
 
-- `PlaylistId` in the __PlaylistTrack__ table is a foreign key linked to the `PlaylistId` (primary key) in the __Playlist__ table.
-- `TrackId` in the __PlaylistTrack__ table is a foreign key linked to the `TrackId` (primary key) in the __Track__ table.
+- `PlaylistId` in the [PlaylistTrack](#playlisttrack) table is a foreign key linked to the `PlaylistId` (primary key) in the [Playlist](#playlist) table.
+- `TrackId` in the [PlaylistTrack](#playlisttrack) table is a foreign key linked to the `TrackId` (primary key) in the [Track](#track) table.
 
 ### Genre
 
@@ -144,7 +144,7 @@ Relationship:
 | `LastName` | Last name of the employee |
 | `FirstName` | First name of the employee |
 | `Title` | Title of the employee |
-| `ReportsTo` | EmployeeId of the employee's supervisor |
+| `ReportsTo` | `EmployeeId` of the employee's supervisor |
 | `BirthDate` | Birth date of the employee |
 | `HireDate` | Hire date of the employee |
 | `Address` | Address of the employee |
@@ -172,29 +172,29 @@ Relationship:
 | `Phone` | Phone number of the customer |
 | `Fax` | Fax number of the customer |
 | `Email` | Email address of the customer |
-| `SupportRepId` | EmployeeId of the customer's support representative |
+| `SupportRepId` | `EmployeeId` of the customer's support representative |
 
 ### InvoiceLine
 
 | __Column Name__ | __Description__ |
 | --- | --- |
 | `InvoiceLineId` | Unique identifier for each invoice line |
-| `InvoiceId` | Foreign key referencing the Invoice table (`InvoiceId`) |
-| `TrackId` | Foreign key referencing the Track table (`TrackId`) |
+| `InvoiceId` | Foreign key referencing the [Invoice](#invoice) table (`InvoiceId`) |
+| `TrackId` | Foreign key referencing the [Track](#track) table (`TrackId`) |
 | `UnitPrice` | Price per unit of the track |
 | `Quantity` | Quantity of tracks purchased in the invoice line |
 
 Relationship:
 
-- InvoiceId in the InvoiceLine table is a foreign key linked to the InvoiceId (primary key) in the Invoice table.
-- TrackId in the InvoiceLine table is a foreign key linked to the TrackId (primary key) in the Track table.
+- `InvoiceId` in the [InvoiceLine](#invoiceline) table is a foreign key linked to the `InvoiceId` (primary key) in the [Invoice](#invoice) table.
+- `TrackId` in the [InvoiceLine](#invoiceline) table is a foreign key linked to the `TrackId` (primary key) in the [Track](#track) table.
 
 ### Invoice
 
 | __Column Name__ | __Description__ |
 | --- | --- |
 | `InvoiceId` | Unique identifier for each invoice |
-| `CustomerId` | Foreign key referencing the Customer table (`CustomerId`) |
+| `CustomerId` | Foreign key referencing the [Customer](#customer) table (`CustomerId`) |
 | `InvoiceDate` | Date of the invoice |
 | `BillingAddress` | Billing address of the invoice |
 | `BillingCity` | Billing city of the invoice |
