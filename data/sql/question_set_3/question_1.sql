@@ -3,7 +3,7 @@ WITH GenrePopularity AS (
     SELECT 
         c.Country,
         g.GenreId,
-        g.Name, 
+        g.Name,
         COUNT(il.Quantity) Purchases
     FROM InvoiceLine il
     JOIN Invoice i ON il.InvoiceId = i.InvoiceId
@@ -13,10 +13,9 @@ WITH GenrePopularity AS (
     GROUP BY c.Country, g.GenreId, g.Name
 )
 SELECT 
-    gp.Purchases,
     gp.Country,
-    gp.Name,
-    gp.GenreId
+    gp.Name Genre,
+    gp.Purchases
 FROM GenrePopularity gp
 JOIN (
     SELECT Country, MAX(Purchases) AS MaxPurchases

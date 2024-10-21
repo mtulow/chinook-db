@@ -4,7 +4,7 @@ SELECT
     c.Email,
     c.FirstName,
     c.LastName,
-    g.Name
+    g.Name Genre
 -- Base table
 FROM InvoiceLine il
 -- collect genre information

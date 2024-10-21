@@ -14,10 +14,9 @@ WITH CustomerSpending AS (
 )
 SELECT
     cs.Country,
-    cs.CustomerId,
     cs.FirstName,
     cs.LastName,
-    ROUND(cs.TotalSpent,2)
+    ROUND(cs.TotalSpent,2) TotalInvoices
 FROM CustomerSpending cs
 JOIN (
     SELECT

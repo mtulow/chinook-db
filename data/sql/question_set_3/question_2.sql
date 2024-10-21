@@ -1,6 +1,6 @@
 /* Query: W */
 SELECT
-    Name,
+    Name Track,
     Milliseconds
 FROM Track
 WHERE Milliseconds >= (SELECT AVG(Milliseconds) FROM Track)
