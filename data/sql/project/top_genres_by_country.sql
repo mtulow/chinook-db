@@ -9,7 +9,7 @@ WITH GenrePerformance AS (
         c.Country,
         
         /* InvoiceLine columns */
-        COUNT(il.InvoiceLineId) AS Purchases,
+        COUNT(il.Quantity) AS Purchases,
         SUM(il.Quantity*il.UnitPrice) AS Sales
     FROM InvoiceLine il
     JOIN Invoice i ON il.InvoiceId = i.InvoiceId
@@ -20,7 +20,7 @@ WITH GenrePerformance AS (
 )
 SELECT
     /* Genre columns */
-    gp.GenreId,
+    -- gp.GenreId,
     gp.Name Genre,
 
     /* Location columns */
