@@ -15,19 +15,22 @@ The Chinook Database holds information about a music store. For this project, yo
 
 | Query | SQL | CSV | Excel |
 | ----- | --- | --- | ----- |
-| Query 1: Ranked Employee Monthly Sales | [query_1.sql](./data/sql/query_1.sql) | [query_1.csv](./data/csv/query_1.csv) | [[query_1]sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
-| Query 2: Top Genre per Country by Sales | [query_2.sql:](./data/sql/query_2.sql) | [query_2.csv](./data/csv/query_2.csv) | [[query_2]sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
-| Query 3: Rock Artists vs. Song Count | [query_3.sql](./data/sql/query_3.sql) | [query_3.csv](./data/csv/query_3.csv) | [[query_3]sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
-| Query 4: Top Paying Customers per Country | [query_4.sql](./data/sql/query_4.sql) | [query_4.csv](./data/csv/query_4.csv) | [[query_4]sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
+| Query 1: Ranked Employee Monthly Sales | [query_1.sql](./data/sql/query_1.sql) | [query_1.csv](./data/csv/query_1.csv) | [sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
+| Query 2: Top Genre per Country by Sales | [query_2.sql:](./data/sql/query_2.sql) | [query_2.csv](./data/csv/query_2.csv) | [sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
+| Query 3: Rock Artists vs. Song Count | [query_3.sql](./data/sql/query_3.sql) | [query_3.csv](./data/csv/query_3.csv) | [sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
+| Query 4: Top Paying Customers per Country | [query_4.sql](./data/sql/query_4.sql) | [query_4.csv](./data/csv/query_4.csv) | [sql_project.xlsx](./data/xlsx/sql_project.xlsx) |
 
 ---
 
 ### Analysis
 
-#### Query 1: Ranked Employee Monthly Sales
+Documents:
 
-- PDF Report [here](./SQL_Project/report.pdf)
-- Queries File [here](./SQL_Project/Queries.txt)
+- Queries File: [Queries.txt](./SQL_Project/Queries.txt)
+- PDF Presentation: [Report.pdf](./SQL_Project/report.pdf)
+- Spreadsheet
+  - Google Sheets: [sql_project](https://docs.google.com/spreadsheets/d/1O7LMYjJiHAP39wgg7giwlFQwC9hul8NxzL2cPUjfw-4/edit?usp=sharing)
+  - Microsoft Excel: [sql_project.xlsx](./data/xlsx/sql_project.xlsx)
 
 ---
 ---
