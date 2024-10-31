@@ -44,7 +44,7 @@ The Chinook Database holds information about a music store. For this project, yo
 
 > The following visualization illustrates the number of songs for various rock artists. Led Zeppelin tops the list with the most songs (114), followed by U2 (112), Deep Purple (92), and Iron Maiden (81).
 >
-> ![chart_3.png](./images/png/chart_3-bar.png)
+> ![chart_3.png](./images/png/chart_3-column.png)
 
 ---
 
