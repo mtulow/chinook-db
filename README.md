@@ -9,6 +9,28 @@ The Chinook Database holds information about a music store. For this project, yo
 ---
 ---
 
+## Reporting
+---
+
+### Queries
+
+| Query | SQL | CSV |
+| -------- | --- | --- |
+| Query 1: Ranked Employee Monthly Sales | [query_1.sql](./data/sql/query_1.sql) | [query_1.csv](./data/csv/query_1.csv) |
+| Query 2: Top Genre per Country by Sales | [query_2.sql:](./data/sql/query_2.sql) | [query_2](./data/csv/query_2.csv) |
+| Query 3: Rock Artists vs. Song Count | [query_3.sql](./data/sql/query_3.sql) | [query_3.csv](./data/csv/query_3.csv) |
+| Query 4: Top Paying Customers per Country | [query_4.sql](./data/sql/query_4.sql) | [query_4.csv](./data/csv/query_4.csv) |
+
+---
+
+### Analysis
+
+- PDF Report [here](./SQL_Project/report.pdf)
+- Queries File [here](./SQL_Project/Queries.txt)
+
+---
+---
+
 ## Tables
 
 ### Artist

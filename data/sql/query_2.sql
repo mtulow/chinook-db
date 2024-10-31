@@ -1,25 +1,22 @@
 /* Query 2: Top genre per country by sales */
 WITH GenrePerformance AS (
     SELECT
-        /* Customer columns */
-        c.Country,
-
-        /* Genre columns */
+        /* Dimension columns */
+        i.BillingCountry Country,
         g.Name Genre,
 
-        /* InvoiceLine columns */
+        /* Aggregate columns */
         COUNT(il.Quantity) AS Purchases,
         ROUND(SUM(il.Quantity*il.UnitPrice),2) AS Sales
 
     FROM InvoiceLine il
     JOIN Invoice i ON il.InvoiceId = i.InvoiceId
-    JOIN Customer c ON i.CustomerId = c.CustomerId
     JOIN Track t ON il.TrackId = t.TrackId
     JOIN Genre g ON t.GenreId = g.GenreId
-    GROUP BY c.Country, g.GenreId, g.Name
+    GROUP BY i.BillingCountry, g.GenreId, g.Name
 )
 SELECT
-    /* Location columns */
+    /* Dimension columns */
     gp.Country,
     gp.Genre,
 
