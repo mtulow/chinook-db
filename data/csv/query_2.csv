@@ -1,26 +1,26 @@
-"Country","Genre","Purchases","Sales"
-"Argentina","Rock",9,8.91
-"Argentina","Alternative & Punk",9,8.91
-"Australia","Rock",22,21.78
-"Austria","Rock",15,14.85
-"Belgium","Rock",21,20.79
-"Brazil","Rock",81,80.19
-"Canada","Rock",107,105.93
-"Chile","Rock",9,8.91
-"Czech Republic","Rock",25,24.75
-"Denmark","Rock",21,20.79
-"Finland","Rock",18,17.82
-"France","Rock",65,64.35
-"Germany","Rock",62,61.38
-"Hungary","Rock",11,10.89
-"India","Rock",25,24.75
-"Ireland","Rock",12,11.88
-"Italy","Rock",18,17.82
-"Netherlands","Rock",18,17.82
-"Norway","Rock",17,16.83
-"Poland","Rock",22,21.78
-"Portugal","Rock",31,30.69
-"Spain","Rock",22,21.78
-"Sweden","Latin",12,11.88
-"USA","Rock",157,155.43
-"United Kingdom","Rock",37,36.63
+,Country,Genre,Purchases,Sales
+0,Argentina,Rock,9,8.91
+1,Argentina,Alternative & Punk,9,8.91
+2,Australia,Rock,22,21.78
+3,Austria,Rock,15,14.85
+4,Belgium,Rock,21,20.79
+5,Brazil,Rock,81,80.19
+6,Canada,Rock,107,105.93
+7,Chile,Rock,9,8.91
+8,Czech Republic,Rock,25,24.75
+9,Denmark,Rock,21,20.79
+10,Finland,Rock,18,17.82
+11,France,Rock,65,64.35
+12,Germany,Rock,62,61.38
+13,Hungary,Rock,11,10.89
+14,India,Rock,25,24.75
+15,Ireland,Rock,12,11.88
+16,Italy,Rock,18,17.82
+17,Netherlands,Rock,18,17.82
+18,Norway,Rock,17,16.83
+19,Poland,Rock,22,21.78
+20,Portugal,Rock,31,30.69
+21,Spain,Rock,22,21.78
+22,Sweden,Latin,12,11.88
+23,USA,Rock,157,155.43
+24,United Kingdom,Rock,37,36.63

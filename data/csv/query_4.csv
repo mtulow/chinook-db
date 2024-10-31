@@ -1,26 +1,25 @@
-"Country","FirstName","LastName","TotalSpent"
-"Argentina","Diego","Gutiérrez",37.62
-"Australia","Mark","Taylor",37.62
-"Austria","Astrid","Gruber",42.62
-"Belgium","Daan","Peeters",37.62
-"Brazil","Luís","Gonçalves",39.62
-"Canada","François","Tremblay",39.62
-"Chile","Luis","Rojas",46.62
-"Czech Republic","Helena","Holý",49.62
-"Denmark","Kara","Nielsen",37.62
-"Finland","Terhi","Hämäläinen",41.62
-"France","Isabelle","Mercier",40.62
-"Germany","Fynn","Zimmermann",43.62
-"Hungary","Ladislav","Kovács",45.62
-"India","Manoj","Pareek",38.62
-"Ireland","Hugh","O'Reilly",45.62
-"Italy","Lucas","Mancini",37.62
-"Netherlands","Johannes","Van der Berg",40.62
-"Norway","Bjørn","Hansen",39.62
-"Poland","Stanisław","Wójcik",37.62
-"Portugal","João","Fernandes",39.62
-"Spain","Enrique","Muñoz",37.62
-"Sweden","Joakim","Johansson",38.62
-"USA","Richard","Cunningham",47.62
-"United Kingdom","Emma","Jones",37.62
-"United Kingdom","Phil","Hughes",37.62
+,Country,Customer,Total
+0,Argentina,Diego Gutiérrez,37.62
+1,Australia,Mark Taylor,37.62
+2,Austria,Astrid Gruber,42.62
+3,Belgium,Daan Peeters,37.62
+4,Brazil,Roberto Almeida,37.62
+5,Canada,Robert Brown,37.62
+6,Chile,Luis Rojas,46.62
+7,Czech Republic,Helena Holý,49.62
+8,Denmark,Kara Nielsen,37.62
+9,Finland,Terhi Hämäläinen,41.62
+10,France,Wyatt Girard,39.62
+11,Germany,Fynn Zimmermann,43.62
+12,Hungary,Ladislav Kovács,45.62
+13,India,Manoj Pareek,38.62
+14,Ireland,Hugh O'Reilly,45.62
+15,Italy,Lucas Mancini,37.62
+16,Netherlands,Johannes Van der Berg,40.62
+17,Norway,Bjørn Hansen,39.62
+18,Poland,Stanisław Wójcik,37.62
+19,Portugal,Madalena Sampaio,37.62
+20,Spain,Enrique Muñoz,37.62
+21,Sweden,Joakim Johansson,38.62
+22,USA,Victor Stevens,42.62
+23,United Kingdom,Steve Murray,37.62

@@ -4,16 +4,25 @@ import glob
 import sqlite3
 import openpyxl
 import pandas as pd
+import matplotlib.pyplot as plt
 
+plt.style.use('seaborn-v0_8-whitegrid')
+# print('- '+'\n- '.join(plt.style.available))
 
+# #
+# I/O Functions
+# #
 
-
-def execute_read_script(sql_file: str, db_file: str = './chinook_db/chinook.db'):
+def execute_read_script(sql_file: str, db_file: str = None) -> pd.DataFrame:
     """Run a SQL file in sqlite3."""
+    # Default database file to: `./chinook_db/chinook.db``
+    db_file = db_file or './chinook_db/chinook.db'
+
+    # Connect to sqlite database
     with sqlite3.connect(db_file) as conn:
         with open(sql_file, 'r') as f:
             df = pd.read_sql(f.read(), con=conn)
-            return df
+    return df
         
 def write_to_csv(df: pd.DataFrame, csv_file: str, verbose: bool = False):
     """Writes a pandas.DataFrame to a csv file."""
@@ -68,48 +77,136 @@ def write_to_spreadsheet(df: pd.DataFrame, sheet_name: str, xlsx_file: str) -> s
 
     return xlsx_file
 
+# # 
+# Plotting Functions
+# #
 
-def run_project_queries():
-    project_queries = map(
-        sorted, [glob.glob('data/sql/project/*.sql')]
-    )
-    for queries in project_queries:
-        for script in queries:
-            # 
-            df = execute_read_script(script)
+def create_chart1(df: pd.DataFrame, chart_file: str,):
+    """Create chart for `query_1.sql` script."""
+    ## Load dataframe
+    # df = pd.read_csv(csv_file)
+    
+    # Create pivot table
+    df_pivot = pd.pivot(df, index='Date', columns='Employee', values='Sales')
+    df_pivot.fillna(0, inplace=True)
+    df_pivot['Grand Total'] = df_pivot.apply(sum, axis=1)
+    print(df_pivot)
+    # print()
+    # print(df_pivot.apply(sum, axis=1))
+    input()
 
-            csv_file = script.replace('sql', 'csv')
+    # plot pivot table
+    fig, ax = plt.subplots()
+
+    x = df_pivot.index
+    y = df_pivot[df_pivot.columns[-1]]
+    ax.bar(x=x, height=y, alpha=0.25, label='Grand Total')
+    
+    x = df_pivot.index
+    ys = df_pivot[df_pivot.columns[:-1]]
+    ax.plot(x, ys, '.-')
+    ax.set_xlabel('Date')
+    ax.set_ylabel('Sales (in USD)')
+    ax.set_
+    ax.set_title('Employee Monthly Sales')
+    ax.legend(loc='best')
+
+    plt.show()
+
+    ui = input(f'Press Enter to save chart to: {chart_file} ...')
+    if not not ui:
+        plt.savefig(chart_file)
+
+    return chart_file
+
+def create_chart2(df: pd.DataFrame, chart_file: str,):
+    """Create chart for `query_2.sql` script."""
+    pass
+
+def create_chart3(df: pd.DataFrame, chart_file: str,):
+    """Create chart for `query_3.sql` script."""
+    pass
+
+def create_chart4(df: pd.DataFrame, chart_file: str,):
+    """Create chart for `query_4.sql` script."""
+    pass
+
+def create_charts(df: pd.DataFrame, chart_file: str,):
+    """Create"""
+    print(f'Creating chart: {chart_file}')
+    if 'query_1' in chart_file:
+        create_chart1(df, chart_file)
+    elif 'query_2' in chart_file:
+        create_chart2(df, chart_file)
+    elif 'query_3' in chart_file:
+        create_chart3(df, chart_file)
+    elif 'query_4' in chart_file:
+        create_chart4(df, chart_file)
+    else:
+        print('Error!')
+    print()
+
+# #
+# Application Functions
+# #
+
+def run_project_queries(data_dir: str = None, *, verbose: bool = False):
+    """Run the project queries."""
+    # Default data directory to: `./data`
+    data_dir = data_dir or './data'
+
+    # Iterate over sql files to read
+    for sql_file in sorted(glob.glob(f'{data_dir}/sql/*.sql')):
+        # Fetch filepaths first
+        csv_file = sql_file.replace('sql', 'csv')
+        sheet_name = os.path.basename(sql_file).removesuffix('.sql')
+        xlsx_file = os.path.dirname(sql_file).replace('sql','xlsx')+'/sql_project.xlsx'
+        chart_file = f'charts/{sheet_name}.png'
+        
+        ## Load and save data
+        # If CSV file exists, load from csv
+        if os.path.exists(csv_file):
+            # Load CSV data
+            print(f'Loading from csv file: {csv_file}')
+            df = pd.read_csv(csv_file)
+            print()
+        
+        # If not, load from sql
+        else:
+            # Load SQL data into dataframe
+            print(f'Loading from SQL script: {sql_file}')
+            df = execute_read_script(sql_file)
+            print()
+            
+            # Write dataframe to csv file
+            print(f'Writing to csv file: {csv_file}')
             write_to_csv(df, csv_file)
+            print()
 
-            xlsx_file = os.path.dirname(script).replace('sql','xlsx')+'.xlsx'
-            sheet_name = os.path.basename(script).removesuffix('.sql')
+        ## Create new sheet in spreadsheet
+        # If excel workbook exists, skip
+        if os.path.exists(xlsx_file):
+            print(f'Spreadsheet `{xlsx_file}` already exists.\nSkipping new sheet: {sheet_name} ...')
+            print()
+            
+        else:
+            # Write dataframe to xlsx sheet
+            print(f'Writing to spreadsheet: {xlsx_file}')
+            print(f'Sheet name: {sheet_name}')
             write_to_spreadsheet(df, sheet_name, xlsx_file)
+            print()
 
-def run_qustion_sets():
+    
+        # # If chart file exists, overwrite file
+        # create_charts(df, chart_file)
 
-    question_sets = map(
-        sorted, [glob.glob('data/sql/question_set_1/*.sql'),
-                 glob.glob('data/sql/question_set_2/*.sql'),
-                 glob.glob('data/sql/question_set_3/*.sql'),
-                 glob.glob('data/sql/project/*.sql'),
-                 ]
-    )
 
 def main():
     """Run the application."""
+    run_project_queries()
+    print('Done!')
 
-    # run_project_queries()
-    with sqlite3.connect('chinook-db/chinook.db') as conn:
-        q = 'SELECT name FROM sqlite_master WHERE type="table";'
-        tables = pd.read_sql(q, con=conn)
 
-        for table in tables.values:
-            table = table[0]
-            query = f'SELECT * FROM {table};'
-            df = pd.read_sql(query, con=conn)
-            print(table, ':\t', ' | '.join(df.columns))
-
-        
 
 if __name__ == '__main__':
     print()

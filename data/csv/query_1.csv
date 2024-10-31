@@ -1,238 +1,172 @@
-"Country","Genre","Purchases","Sales"
-"Argentina","Rock",9,8.91
-"Argentina","Alternative & Punk",9,8.91
-"Argentina","Latin",8,7.92
-"Argentina","Metal",7,6.93
-"Argentina","Jazz",2,1.98
-"Argentina","Easy Listening",2,1.98
-"Argentina","Soundtrack",1,0.99
-"Australia","Rock",22,21.78
-"Australia","Metal",8,7.92
-"Australia","Heavy Metal",3,2.97
-"Australia","Reggae",2,1.98
-"Australia","Latin",2,1.98
-"Australia","Blues",1,0.99
-"Austria","Rock",15,14.85
-"Austria","Metal",7,6.93
-"Austria","TV Shows",4,7.96
-"Austria","R&B/Soul",4,3.96
-"Austria","Latin",2,1.98
-"Austria","Jazz",2,1.98
-"Austria","Classical",2,1.98
-"Austria","Pop",1,0.99
-"Austria","Drama",1,1.99
-"Belgium","Rock",21,20.79
-"Belgium","Alternative & Punk",14,13.86
-"Belgium","R&B/Soul",2,1.98
-"Belgium","Metal",1,0.99
-"Brazil","Rock",81,80.19
-"Brazil","Latin",53,52.47
-"Brazil","Metal",15,14.85
-"Brazil","Alternative & Punk",7,6.93
-"Brazil","Reggae",6,5.94
-"Brazil","Classical",6,5.94
-"Brazil","Blues",6,5.94
-"Brazil","Soundtrack",4,3.96
-"Brazil","R&B/Soul",3,2.97
-"Brazil","Pop",3,2.97
-"Brazil","World",2,1.98
-"Brazil","Sci Fi & Fantasy",2,3.98
-"Brazil","Hip Hop/Rap",2,1.98
-"Canada","Rock",107,105.93
-"Canada","Latin",60,59.4
-"Canada","Metal",40,39.6
-"Canada","Alternative & Punk",36,35.64
-"Canada","Jazz",13,12.87
-"Canada","Reggae",7,6.93
-"Canada","Bossa Nova",7,6.93
-"Canada","World",6,5.94
-"Canada","R&B/Soul",5,4.95
-"Canada","Hip Hop/Rap",5,4.95
-"Canada","Classical",5,4.95
-"Canada","Electronica/Dance",4,3.96
-"Canada","Blues",4,3.96
-"Canada","Rock And Roll",2,1.98
-"Canada","Drama",2,3.98
-"Canada","TV Shows",1,1.99
-"Chile","Rock",9,8.91
-"Chile","Latin",8,7.92
-"Chile","Drama",4,7.96
-"Chile","Metal",3,2.97
-"Chile","Easy Listening",3,2.97
-"Chile","TV Shows",2,3.98
-"Chile","Science Fiction",2,3.98
-"Chile","Blues",2,1.98
-"Chile","Alternative & Punk",2,1.98
-"Chile","Soundtrack",1,0.99
-"Chile","Sci Fi & Fantasy",1,1.99
-"Chile","Classical",1,0.99
-"Czech Republic","Rock",25,24.75
-"Czech Republic","Latin",9,8.91
-"Czech Republic","Alternative & Punk",9,8.91
-"Czech Republic","TV Shows",8,15.92
-"Czech Republic","Metal",6,5.94
-"Czech Republic","Drama",6,11.94
-"Czech Republic","Pop",4,3.96
-"Czech Republic","Jazz",3,2.97
-"Czech Republic","R&B/Soul",2,1.98
-"Czech Republic","Electronica/Dance",2,1.98
-"Czech Republic","Science Fiction",1,1.99
-"Czech Republic","Blues",1,0.99
-"Denmark","Rock",21,20.79
-"Denmark","Metal",6,5.94
-"Denmark","Latin",4,3.96
-"Denmark","Alternative & Punk",4,3.96
-"Denmark","Pop",3,2.97
-"Finland","Rock",18,17.82
-"Finland","Latin",9,8.91
-"Finland","Sci Fi & Fantasy",4,7.96
-"Finland","Metal",2,1.98
-"Finland","Jazz",2,1.98
-"Finland","Alternative & Punk",2,1.98
-"Finland","Reggae",1,0.99
-"France","Rock",65,64.35
-"France","Alternative & Punk",31,30.69
-"France","Latin",26,25.74
-"France","Metal",20,19.8
-"France","Jazz",11,10.89
-"France","Classical",10,9.9
-"France","Soundtrack",5,4.95
-"France","Drama",4,7.96
-"France","Alternative",4,3.96
-"France","Sci Fi & Fantasy",2,3.98
-"France","Pop",2,1.98
-"France","Hip Hop/Rap",2,1.98
-"France","Electronica/Dance",2,1.98
-"France","Blues",2,1.98
-"France","TV Shows",1,1.99
-"France","Rock And Roll",1,0.99
-"France","Reggae",1,0.99
-"France","Bossa Nova",1,0.99
-"Germany","Rock",62,61.38
-"Germany","Metal",25,24.75
-"Germany","Latin",18,17.82
-"Germany","Blues",14,13.86
-"Germany","Alternative & Punk",13,12.87
-"Germany","Soundtrack",5,4.95
-"Germany","TV Shows",3,5.97
-"Germany","Heavy Metal",3,2.97
-"Germany","Science Fiction",2,3.98
-"Germany","Jazz",2,1.98
-"Germany","Easy Listening",2,1.98
-"Germany","Pop",1,0.99
-"Germany","Drama",1,1.99
-"Germany","Alternative",1,0.99
-"Hungary","Rock",11,10.89
-"Hungary","R&B/Soul",5,4.95
-"Hungary","Metal",5,4.95
-"Hungary","TV Shows",4,7.96
-"Hungary","Latin",3,2.97
-"Hungary","Alternative & Punk",3,2.97
-"Hungary","Drama",2,3.98
-"Hungary","Blues",2,1.98
-"Hungary","Sci Fi & Fantasy",1,1.99
-"Hungary","Electronica/Dance",1,0.99
-"Hungary","Comedy",1,1.99
-"India","Rock",25,24.75
-"India","Alternative & Punk",11,10.89
-"India","Jazz",10,9.9
-"India","Latin",9,8.91
-"India","Metal",8,7.92
-"India","R&B/Soul",4,3.96
-"India","Blues",3,2.97
-"India","Classical",2,1.98
-"India","TV Shows",1,1.99
-"India","Sci Fi & Fantasy",1,1.99
-"Ireland","Rock",12,11.88
-"Ireland","TV Shows",7,13.93
-"Ireland","Latin",7,6.93
-"Ireland","Alternative & Punk",4,3.96
-"Ireland","Metal",3,2.97
-"Ireland","Jazz",3,2.97
-"Ireland","Drama",1,1.99
-"Ireland","Blues",1,0.99
-"Italy","Rock",18,17.82
-"Italy","Alternative & Punk",11,10.89
-"Italy","Blues",4,3.96
-"Italy","Latin",2,1.98
-"Italy","Classical",2,1.98
-"Italy","Metal",1,0.99
-"Netherlands","Rock",18,17.82
-"Netherlands","Alternative & Punk",5,4.95
-"Netherlands","Blues",4,3.96
-"Netherlands","Sci Fi & Fantasy",3,5.97
-"Netherlands","Pop",3,2.97
-"Netherlands","Latin",3,2.97
-"Netherlands","Metal",2,1.98
-"Norway","Rock",17,16.83
-"Norway","Latin",5,4.95
-"Norway","Classical",5,4.95
-"Norway","Alternative",4,3.96
-"Norway","Electronica/Dance",2,1.98
-"Norway","Drama",2,3.98
-"Norway","Alternative & Punk",2,1.98
-"Norway","World",1,0.99
-"Poland","Rock",22,21.78
-"Poland","Latin",7,6.93
-"Poland","Alternative & Punk",7,6.93
-"Poland","Jazz",1,0.99
-"Poland","Blues",1,0.99
-"Portugal","Rock",31,30.69
-"Portugal","Latin",13,12.87
-"Portugal","Metal",11,10.89
-"Portugal","Alternative & Punk",5,4.95
-"Portugal","Pop",4,3.96
-"Portugal","World",2,1.98
-"Portugal","R&B/Soul",2,1.98
-"Portugal","Jazz",2,1.98
-"Portugal","Heavy Metal",2,1.98
-"Portugal","TV Shows",1,1.99
-"Portugal","Sci Fi & Fantasy",1,1.99
-"Portugal","Electronica/Dance",1,0.99
-"Portugal","Blues",1,0.99
-"Spain","Rock",22,21.78
-"Spain","Latin",4,3.96
-"Spain","Alternative & Punk",4,3.96
-"Spain","Metal",3,2.97
-"Spain","Reggae",2,1.98
-"Spain","Jazz",2,1.98
-"Spain","Hip Hop/Rap",1,0.99
-"Sweden","Latin",12,11.88
-"Sweden","Rock",10,9.9
-"Sweden","Metal",7,6.93
-"Sweden","Alternative & Punk",6,5.94
-"Sweden","World",1,0.99
-"Sweden","TV Shows",1,1.99
-"Sweden","Jazz",1,0.99
-"USA","Rock",157,155.43
-"USA","Latin",91,90.09
-"USA","Metal",64,63.36
-"USA","Alternative & Punk",50,49.5
-"USA","Jazz",22,21.78
-"USA","Blues",15,14.85
-"USA","TV Shows",14,27.86
-"USA","R&B/Soul",12,11.88
-"USA","Comedy",8,15.92
-"USA","Classical",8,7.92
-"USA","Bossa Nova",7,6.93
-"USA","Reggae",6,5.94
-"USA","Drama",6,11.94
-"USA","Sci Fi & Fantasy",5,9.95
-"USA","Pop",5,4.95
-"USA","Alternative",5,4.95
-"USA","Soundtrack",4,3.96
-"USA","Hip Hop/Rap",4,3.96
-"USA","Heavy Metal",4,3.96
-"USA","Rock And Roll",3,2.97
-"USA","Easy Listening",3,2.97
-"USA","Science Fiction",1,1.99
-"United Kingdom","Rock",37,36.63
-"United Kingdom","Latin",31,30.69
-"United Kingdom","Metal",20,19.8
-"United Kingdom","Alternative & Punk",9,8.91
-"United Kingdom","Reggae",5,4.95
-"United Kingdom","Jazz",4,3.96
-"United Kingdom","Hip Hop/Rap",3,2.97
-"United Kingdom","R&B/Soul",2,1.98
-"United Kingdom","Pop",2,1.98
-"United Kingdom","World",1,0.99
+,Date,Rank,Employee,Customers,Sales
+0,2009-01-01,1,Margaret Park,3,23.76
+1,2009-01-01,2,Steve Johnson,2,10.89
+2,2009-01-01,3,Jane Peacock,1,0.99
+3,2009-02-01,1,Steve Johnson,1,13.86
+4,2009-02-01,2,Margaret Park,2,2.97
+5,2009-02-01,3,Jane Peacock,4,20.79
+6,2009-03-01,1,Margaret Park,1,13.86
+7,2009-03-01,2,Steve Johnson,5,21.78
+8,2009-03-01,3,Jane Peacock,1,1.98
+9,2009-04-01,1,Jane Peacock,3,18.81
+10,2009-04-01,2,Steve Johnson,1,1.98
+11,2009-04-01,3,Margaret Park,3,16.83
+12,2009-05-01,1,Jane Peacock,3,10.89
+13,2009-05-01,2,Steve Johnson,3,24.75
+14,2009-05-01,3,Margaret Park,1,1.98
+15,2009-06-01,1,Steve Johnson,4,24.75
+16,2009-06-01,2,Margaret Park,2,10.89
+17,2009-06-01,3,Jane Peacock,1,1.98
+18,2009-07-01,1,Margaret Park,1,3.96
+19,2009-07-01,2,Steve Johnson,2,10.89
+20,2009-07-01,3,Jane Peacock,4,22.77
+21,2009-08-01,1,Margaret Park,3,6.93
+22,2009-08-01,2,Jane Peacock,4,30.69
+23,2009-09-01,1,Steve Johnson,2,7.92
+24,2009-09-01,2,Margaret Park,4,28.71
+25,2009-09-01,3,Jane Peacock,1,0.99
+26,2009-10-01,1,Steve Johnson,5,29.7
+27,2009-10-01,2,Margaret Park,2,7.92
+28,2009-11-01,1,Jane Peacock,1,3.96
+29,2009-11-01,2,Steve Johnson,1,1.98
+30,2009-11-01,3,Margaret Park,5,31.68
+31,2009-12-01,1,Jane Peacock,2,9.9
+32,2009-12-01,2,Steve Johnson,2,15.84
+33,2009-12-01,3,Margaret Park,3,11.88
+34,2010-01-01,1,Steve Johnson,5,48.66
+35,2010-01-01,2,Jane Peacock,2,3.96
+36,2010-02-01,1,Steve Johnson,1,8.91
+37,2010-02-01,2,Margaret Park,2,5.94
+38,2010-02-01,3,Jane Peacock,4,31.77
+39,2010-03-01,1,Jane Peacock,5,34.72
+40,2010-03-01,2,Margaret Park,2,9.9
+41,2010-04-01,1,Jane Peacock,3,26.73
+42,2010-04-01,2,Steve Johnson,3,8.91
+43,2010-04-01,3,Margaret Park,1,1.98
+44,2010-05-01,1,Steve Johnson,1,13.86
+45,2010-05-01,2,Margaret Park,5,21.78
+46,2010-05-01,3,Jane Peacock,1,1.98
+47,2010-06-01,1,Steve Johnson,1,8.91
+48,2010-06-01,2,Margaret Park,4,22.77
+49,2010-06-01,3,Jane Peacock,2,5.94
+50,2010-07-01,1,Margaret Park,4,15.84
+51,2010-07-01,2,Jane Peacock,3,21.78
+52,2010-08-01,1,Jane Peacock,2,17.82
+53,2010-08-01,2,Steve Johnson,3,11.88
+54,2010-08-01,3,Margaret Park,2,7.92
+55,2010-09-01,1,Margaret Park,2,17.82
+56,2010-09-01,2,Steve Johnson,2,10.89
+57,2010-09-01,3,Jane Peacock,2,7.92
+58,2010-10-01,1,Margaret Park,2,9.9
+59,2010-10-01,2,Steve Johnson,2,15.84
+60,2010-10-01,3,Jane Peacock,3,11.88
+61,2010-11-01,1,Steve Johnson,1,3.96
+62,2010-11-01,2,Jane Peacock,4,30.69
+63,2010-11-01,3,Margaret Park,2,2.97
+64,2010-12-01,1,Margaret Park,1,5.94
+65,2010-12-01,2,Jane Peacock,3,26.73
+66,2010-12-01,3,Steve Johnson,3,4.95
+67,2011-01-01,1,Steve Johnson,3,26.73
+68,2011-01-01,2,Jane Peacock,1,1.98
+69,2011-01-01,3,Margaret Park,3,8.91
+70,2011-02-01,1,Jane Peacock,1,13.86
+71,2011-02-01,2,Steve Johnson,2,7.92
+72,2011-02-01,3,Margaret Park,4,15.84
+73,2011-03-01,1,Margaret Park,1,13.86
+74,2011-03-01,2,Steve Johnson,1,3.96
+75,2011-03-01,3,Jane Peacock,5,19.8
+76,2011-04-01,1,Jane Peacock,2,36.77
+77,2011-04-01,2,Steve Johnson,2,7.92
+78,2011-04-01,3,Margaret Park,3,6.93
+79,2011-05-01,1,Steve Johnson,3,24.8
+80,2011-05-01,2,Margaret Park,3,16.83
+81,2011-05-01,3,Jane Peacock,1,0.99
+82,2011-06-01,1,Steve Johnson,2,17.85
+83,2011-06-01,2,Jane Peacock,2,11.94
+84,2011-06-01,3,Margaret Park,3,20.83
+85,2011-07-01,1,Margaret Park,2,9.9
+86,2011-07-01,2,Steve Johnson,1,1.98
+87,2011-07-01,3,Jane Peacock,4,25.74
+88,2011-08-01,1,Steve Johnson,4,25.74
+89,2011-08-01,2,Jane Peacock,2,10.89
+90,2011-08-01,3,Margaret Park,1,0.99
+91,2011-09-01,1,Steve Johnson,2,10.89
+92,2011-09-01,2,Jane Peacock,3,21.78
+93,2011-09-01,3,Margaret Park,2,4.95
+94,2011-10-01,1,Margaret Park,1,5.94
+95,2011-10-01,2,Jane Peacock,4,28.71
+96,2011-10-01,3,Steve Johnson,2,2.97
+97,2011-11-01,1,Steve Johnson,2,9.9
+98,2011-11-01,2,Margaret Park,2,10.89
+99,2011-11-01,3,Jane Peacock,2,2.97
+100,2011-12-01,1,Steve Johnson,3,18.81
+101,2011-12-01,2,Jane Peacock,1,8.91
+102,2011-12-01,3,Margaret Park,3,9.9
+103,2012-01-01,1,Margaret Park,3,16.83
+104,2012-01-01,2,Jane Peacock,2,9.9
+105,2012-01-01,3,Steve Johnson,2,10.89
+106,2012-02-01,1,Margaret Park,3,24.75
+107,2012-02-01,2,Jane Peacock,1,3.96
+108,2012-02-01,3,Steve Johnson,3,8.91
+109,2012-03-01,1,Margaret Park,3,18.81
+110,2012-03-01,2,Steve Johnson,2,7.92
+111,2012-03-01,3,Jane Peacock,2,10.89
+112,2012-04-01,1,Steve Johnson,5,29.7
+113,2012-04-01,2,Jane Peacock,1,5.94
+114,2012-04-01,3,Margaret Park,1,1.98
+115,2012-05-01,1,Jane Peacock,5,31.68
+116,2012-05-01,2,Margaret Park,1,3.96
+117,2012-05-01,3,Steve Johnson,1,1.98
+118,2012-06-01,1,Margaret Park,4,22.77
+119,2012-06-01,2,Steve Johnson,1,3.96
+120,2012-06-01,3,Jane Peacock,2,10.89
+121,2012-07-01,1,Steve Johnson,5,35.66
+122,2012-07-01,2,Margaret Park,1,1.98
+123,2012-07-01,3,Jane Peacock,1,1.98
+124,2012-08-01,1,Margaret Park,4,39.7
+125,2012-08-01,2,Steve Johnson,1,1.98
+126,2012-08-01,3,Jane Peacock,2,5.94
+127,2012-09-01,1,Margaret Park,3,24.82
+128,2012-09-01,2,Steve Johnson,1,11.94
+129,2012-09-01,3,Jane Peacock,2,9.95
+130,2012-10-01,1,Jane Peacock,4,24.78
+131,2012-10-01,2,Margaret Park,1,10.91
+132,2012-10-01,3,Steve Johnson,2,6.93
+133,2012-11-01,1,Margaret Park,3,24.75
+134,2012-11-01,2,Jane Peacock,2,7.92
+135,2012-11-01,3,Steve Johnson,2,4.95
+136,2012-12-01,1,Jane Peacock,4,22.77
+137,2012-12-01,2,Steve Johnson,1,8.91
+138,2012-12-01,3,Margaret Park,2,5.94
+139,2013-01-01,1,Margaret Park,2,15.84
+140,2013-01-01,2,Jane Peacock,4,19.8
+141,2013-01-01,3,Steve Johnson,1,1.98
+142,2013-02-01,1,Jane Peacock,2,15.84
+143,2013-02-01,2,Margaret Park,3,11.88
+144,2013-03-01,1,Margaret Park,1,13.86
+145,2013-03-01,2,Steve Johnson,4,17.82
+146,2013-03-01,3,Jane Peacock,2,5.94
+147,2013-04-01,1,Margaret Park,5,33.66
+148,2013-05-01,1,Margaret Park,1,8.91
+149,2013-05-01,2,Steve Johnson,4,20.79
+150,2013-05-01,3,Jane Peacock,2,7.92
+151,2013-06-01,1,Steve Johnson,2,2.97
+152,2013-06-01,2,Jane Peacock,5,34.65
+153,2013-07-01,1,Steve Johnson,1,13.86
+154,2013-07-01,2,Jane Peacock,2,4.95
+155,2013-07-01,3,Margaret Park,4,18.81
+156,2013-08-01,1,Margaret Park,1,13.86
+157,2013-08-01,2,Steve Johnson,3,11.88
+158,2013-08-01,3,Jane Peacock,3,11.88
+159,2013-09-01,1,Jane Peacock,3,10.89
+160,2013-09-01,2,Steve Johnson,2,15.84
+161,2013-09-01,3,Margaret Park,2,10.89
+162,2013-10-01,1,Jane Peacock,2,14.85
+163,2013-10-01,2,Steve Johnson,2,2.97
+164,2013-10-01,3,Margaret Park,3,19.8
+165,2013-11-01,1,Margaret Park,2,9.9
+166,2013-11-01,2,Steve Johnson,2,31.8
+167,2013-11-01,3,Jane Peacock,3,7.92
+168,2013-12-01,1,Jane Peacock,3,21.79
+169,2013-12-01,2,Steve Johnson,2,5.94
+170,2013-12-01,3,Margaret Park,2,10.89
