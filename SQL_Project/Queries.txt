@@ -1,0 +1,112 @@
+/* Query 1: Ranked employee performance by month */
+WITH EmployeePerformance AS (
+    SELECT
+        /* Invoice Columns */
+        i.InvoiceId,
+        STRFTIME('%Y', i.InvoiceDate) Year,
+        STRFTIME('%m', i.InvoiceDate) Month,
+        i.Total,
+
+        /* Employee Columns */
+        e.EmployeeId,
+        e.FirstName,
+        e.LastName,
+
+        /* Customer Columns */
+        c.CustomerId
+
+    FROM Invoice i
+    JOIN Customer c ON i.CustomerId = c.CustomerId
+    JOIN Employee e ON c.SupportRepId = e.EmployeeId
+    ORDER BY i.InvoiceDate
+)
+SELECT
+    /* Date Columns */
+    DATE(ep.Year || '-' || ep.Month || '-01') Date,
+
+    /* Rank employees by year, month, sales */
+    row_number() OVER
+        (PARTITION BY ep.Year, ep.Month ORDER BY ep.Total DESC) AS Rank,
+
+    /* Employee Columns */
+    ep.FirstName || ' ' || ep.LastName Employee,
+
+    /* Aggregate Columns */
+    COUNT(ep.CustomerId) Customers,
+    ROUND(SUM(ep.Total),2) Sales
+
+FROM EmployeePerformance ep
+GROUP BY ep.Year, ep.Month, ep.EmployeeId
+ORDER BY ep.Year, ep.Month;
+
+/* Query 2: Top genre per country by sales */
+WITH GenrePerformance AS (
+    SELECT
+        /* Customer columns */
+        c.Country,
+
+        /* Genre columns */
+        g.Name Genre,
+
+        /* InvoiceLine columns */
+        COUNT(il.Quantity) AS Purchases,
+        ROUND(SUM(il.Quantity*il.UnitPrice),2) AS Sales
+
+    FROM InvoiceLine il
+    JOIN Invoice i ON il.InvoiceId = i.InvoiceId
+    JOIN Customer c ON i.CustomerId = c.CustomerId
+    JOIN Track t ON il.TrackId = t.TrackId
+    JOIN Genre g ON t.GenreId = g.GenreId
+    GROUP BY c.Country, g.GenreId, g.Name
+)
+SELECT
+    /* Location columns */
+    gp.Country,
+    gp.Genre,
+
+    /* Aggregation columns */
+    gp.Purchases,
+    GP.Sales
+
+FROM GenrePerformance gp
+JOIN (
+    SELECT Country, MAX(Purchases) AS MaxPurchases
+    FROM GenrePerformance
+    GROUP BY Country
+) mp ON gp.Country = mp.Country AND gp.Purchases = mp.MaxPurchases
+;
+
+/* Query 3: Rock Artists vs. Song Count */
+-- Genre, Track , Album, and Artist
+SELECT
+    a.Name Artist,
+    COUNT(t.TrackId) AS Songs
+FROM Track t
+-- get genre information
+JOIN Genre g ON t.GenreId = g.GenreId
+-- get artist information
+JOIN Album al ON t.AlbumId = al.AlbumId
+JOIN Artist a ON al.ArtistId = a.ArtistId
+WHERE g.Name = 'Rock'
+GROUP BY a.ArtistId
+ORDER BY Songs DESC;
+
+/* Query 4: Top paying customers per country */
+WITH CustomerPerformance AS (
+    SELECT
+        rank() OVER (PARTITION BY c.Country ORDER BY DATE(i.InvoiceDate) DESC) Rank,
+        c.Country,
+        c.FirstName || ' ' || c.LastName Customer,
+        c.Email,
+        i.Total
+    FROM Invoice i
+    JOIN Customer c ON i.CustomerId = c.CustomerId
+)
+SELECT
+    cp.Country,
+    cp.Customer,
+    ROUND(SUM(cp.Total), 2) Total
+FROM CustomerPerformance cp
+GROUP BY cp.Country, cp.Customer
+HAVING cp.Rank = 1
+;

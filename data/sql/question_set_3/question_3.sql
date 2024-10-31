@@ -8,7 +8,7 @@ WITH CustomerSpending AS (
         c.LastName,
         c.Country,
         SUM(i.Total) OVER
-            (PARTITION BY c.Country, c.CustomerId ORDER BY DATE(i.InvoiceDate)) AS TotalSpent
+            (PARTITION BY c.Country, c.CustomerId ORDER BY DATE(i.InvoiceDate)) AS total_spent
     FROM Invoice i
     JOIN Customer c ON i.CustomerId = c.CustomerId
 )
@@ -16,14 +16,14 @@ SELECT
     cs.Country,
     cs.FirstName,
     cs.LastName,
-    ROUND(cs.TotalSpent,2) TotalInvoices
+    ROUND(cs.total_spent,2) TotalSpent
 FROM CustomerSpending cs
 JOIN (
     SELECT
         Country,
-        MAX(TotalSpent) AS MaxSpending
+        MAX(total_spent) AS MaxSpending
     FROM CustomerSpending
     GROUP BY 1
-) ms ON cs.Country = ms.Country AND cs.TotalSpent = ms.MaxSpending
-ORDER BY cs.Country, cs.TotalSpent DESC
+) ms ON cs.Country = ms.Country AND cs.total_spent = ms.MaxSpending
+ORDER BY cs.Country, cs.total_spent DESC
 ;

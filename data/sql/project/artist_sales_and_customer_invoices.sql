@@ -24,13 +24,23 @@ WITH TopPaidArtist AS (
     JOIN Customer c ON i.CustomerId = c.CustomerId
 )
 SELECT
-    -- Artist Columns
-    tpa.ArtistName,
-    ROUND(tpa.artist_invoice_amounts, 2) ArtistInvoiceAmounts,
+    -- Rank customers by percentage of artist total sales
+    rank() OVER
+        (PARTITION BY tpa.ArtistName ORDER BY ROUND(tpa.artist_invoice_amounts, 2) DESC, tpa.ArtistName, ROUND(SUM(tpa.customer_invoice_amounts), 2) DESC) AS Rank,
+    
+    dense_rank() OVER
+        (PARTITION BY tpa.ArtistName ORDER BY ROUND(tpa.artist_invoice_amounts, 2) DESC, tpa.ArtistName, ROUND(SUM(tpa.customer_invoice_amounts), 2) DESC) AS DenseRank,
+
+    row_number() OVER
+        (PARTITION BY tpa.ArtistName ORDER BY ROUND(tpa.artist_invoice_amounts, 2) DESC, tpa.ArtistName, ROUND(SUM(tpa.customer_invoice_amounts), 2) DESC) AS RowRank,
 
     -- Customer columns
-    tpa.FirstName || ' ' || tpa.LastName CustomerName,
-    ROUND(SUM(tpa.customer_invoice_amounts), 2) CustomerInvoiceAmounts,
+    tpa.FirstName || ' ' || tpa.LastName Customer,
+    ROUND(SUM(tpa.customer_invoice_amounts), 2) CustomerInvoices,
+
+-- Artist Columns
+    tpa.ArtistName Artist,
+    ROUND(tpa.artist_invoice_amounts, 2) ArtistSales,
 
     -- Ratio
     ROUND(SUM(tpa.customer_invoice_amounts) / tpa.artist_invoice_amounts, 4) InvoiceRatios
@@ -39,5 +49,5 @@ FROM TopPaidArtist tpa
 -- WHERE ArtistSales >= 10.00
 -- WHERE InvoiceRatios < 1.00
 GROUP BY tpa.ArtistName, tpa.CustomerId
-ORDER BY ArtistInvoiceAmounts DESC, tpa.ArtistName, CustomerInvoiceAmounts DESC
+ORDER BY ArtistSales DESC, tpa.ArtistName, CustomerInvoices DESC
 ;

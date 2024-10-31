@@ -24,7 +24,7 @@ def write_to_csv(df: pd.DataFrame, csv_file: str, verbose: bool = False):
                 df.to_csv(csv_file,)
                 print('Success!')
         else:
-            print('Writing to SQL script {} to CSV file {} ... ')
+            # print(f'Writing to SQL script {} to CSV file {} ... ')
             df.to_csv(csv_file,)
             print('Success!')
 
@@ -68,8 +68,25 @@ def write_to_spreadsheet(df: pd.DataFrame, sheet_name: str, xlsx_file: str) -> s
 
     return xlsx_file
 
-def main():
-    """Run the application."""
+
+def run_project_queries():
+    project_queries = map(
+        sorted, [glob.glob('data/sql/project/*.sql')]
+    )
+    for queries in project_queries:
+        for script in queries:
+            # 
+            df = execute_read_script(script)
+
+            csv_file = script.replace('sql', 'csv')
+            write_to_csv(df, csv_file)
+
+            xlsx_file = os.path.dirname(script).replace('sql','xlsx')+'.xlsx'
+            sheet_name = os.path.basename(script).removesuffix('.sql')
+            write_to_spreadsheet(df, sheet_name, xlsx_file)
+
+def run_qustion_sets():
+
     question_sets = map(
         sorted, [glob.glob('data/sql/question_set_1/*.sql'),
                  glob.glob('data/sql/question_set_2/*.sql'),
@@ -78,23 +95,21 @@ def main():
                  ]
     )
 
-    for question_set in question_sets:
+def main():
+    """Run the application."""
 
-        for script in question_set:
+    # run_project_queries()
+    with sqlite3.connect('chinook-db/chinook.db') as conn:
+        q = 'SELECT name FROM sqlite_master WHERE type="table";'
+        tables = pd.read_sql(q, con=conn)
 
-            # Execute script and load results into dataframe
-            df = execute_read_script(script) 
+        for table in tables.values:
+            table = table[0]
+            query = f'SELECT * FROM {table};'
+            df = pd.read_sql(query, con=conn)
+            print(table, ':\t', ' | '.join(df.columns))
 
-            # # Write to csv file
-            # csv_file = script.replace('sql', 'csv')
-            # write_to_csv(df, csv_file)
-
-            # Write to spreadsheet
-            xlsx_file = os.path.dirname(script).replace('sql','xlsx')+'.xlsx'
-            sheet_name = os.path.basename(script).removesuffix('.sql')
-            write_to_spreadsheet(df, sheet_name, xlsx_file)
-            # sheet_name = os.path.basename(os.path.dirname(script).replace('sql','xlsx'))+sheet_name
-            # write_to_spreadsheet(df, sheet_name, 'data/xlsx/project.xlsx')
+        
 
 if __name__ == '__main__':
     print()

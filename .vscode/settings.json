@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 100,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "ChinookDB",
+            "database": "chinook_db",
+            "username": "postgres"
+        },
+        {
+            "previewLimit": 100,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:chinook-db}/chinook-db/chinook.db",
+            "name": "chinook"
+        }
+    ]
+}

@@ -1,0 +1,924 @@
+"ROW_NUMBER() OVER (PARTITION BY tpa.ArtistName ORDER BY ROUND(tpa.artist_invoice_amounts, 2) DESC, tpa.ArtistName, ROUND(SUM(tpa.customer_invoice_amounts), 2) DESC)","ArtistName","ArtistInvoiceAmounts","CustomerName","CustomerInvoiceAmounts","InvoiceRatios"
+1,"Iron Maiden",138.6,"Mark Taylor",17.82,0.1286
+2,"Iron Maiden",138.6,"Madalena Sampaio",15.84,0.1143
+3,"Iron Maiden",138.6,"Frank Harris",13.86,0.1
+4,"Iron Maiden",138.6,"Hannah Schneider",13.86,0.1
+5,"Iron Maiden",138.6,"František Wichterlová",8.91,0.0643
+6,"Iron Maiden",138.6,"Patrick Gray",8.91,0.0643
+7,"Iron Maiden",138.6,"Tim Goyer",5.94,0.0429
+8,"Iron Maiden",138.6,"Camille Bernard",5.94,0.0429
+9,"Iron Maiden",138.6,"Manoj Pareek",5.94,0.0429
+10,"Iron Maiden",138.6,"Astrid Gruber",4.95,0.0357
+11,"Iron Maiden",138.6,"Victor Stevens",4.95,0.0357
+12,"Iron Maiden",138.6,"Jennifer Peterson",3.96,0.0286
+13,"Iron Maiden",138.6,"Steve Murray",3.96,0.0286
+14,"Iron Maiden",138.6,"Enrique Muñoz",2.97,0.0214
+15,"Iron Maiden",138.6,"Alexandre Rocha",1.98,0.0143
+16,"Iron Maiden",138.6,"Fernanda Ramos",1.98,0.0143
+17,"Iron Maiden",138.6,"Martha Silk",1.98,0.0143
+18,"Iron Maiden",138.6,"Ellie Sullivan",1.98,0.0143
+19,"Iron Maiden",138.6,"Joakim Johansson",1.98,0.0143
+20,"Iron Maiden",138.6,"Emma Jones",1.98,0.0143
+21,"Iron Maiden",138.6,"Phil Hughes",1.98,0.0143
+22,"Iron Maiden",138.6,"Puja Srivastava",1.98,0.0143
+23,"Iron Maiden",138.6,"Eduardo Martins",0.99,0.0071
+24,"Iron Maiden",138.6,"Edward Francis",0.99,0.0071
+25,"Iron Maiden",138.6,"Ladislav Kovács",0.99,0.0071
+26,"Iron Maiden",138.6,"Hugh O'Reilly",0.99,0.0071
+27,"Iron Maiden",138.6,"Stanisław Wójcik",0.99,0.0071
+1,"U2",105.93,"Astrid Gruber",8.91,0.0841
+2,"U2",105.93,"Madalena Sampaio",8.91,0.0841
+3,"U2",105.93,"Richard Cunningham",7.92,0.0748
+4,"U2",105.93,"Eduardo Martins",5.94,0.0561
+5,"U2",105.93,"Robert Brown",5.94,0.0561
+6,"U2",105.93,"Hugh O'Reilly",5.94,0.0561
+7,"U2",105.93,"Stanisław Wójcik",5.94,0.0561
+8,"U2",105.93,"Helena Holý",4.95,0.0467
+9,"U2",105.93,"Mark Taylor",4.95,0.0467
+10,"U2",105.93,"František Wichterlová",3.96,0.0374
+11,"U2",105.93,"Victor Stevens",3.96,0.0374
+12,"U2",105.93,"João Fernandes",3.96,0.0374
+13,"U2",105.93,"Ladislav Kovács",3.96,0.0374
+14,"U2",105.93,"Kara Nielsen",2.97,0.028
+15,"U2",105.93,"Kathy Chase",2.97,0.028
+16,"U2",105.93,"Johannes Van der Berg",2.97,0.028
+17,"U2",105.93,"Leonie Köhler",1.98,0.0187
+18,"U2",105.93,"Bjørn Hansen",1.98,0.0187
+19,"U2",105.93,"Heather Leacock",1.98,0.0187
+20,"U2",105.93,"John Gordon",1.98,0.0187
+21,"U2",105.93,"Frank Ralston",1.98,0.0187
+22,"U2",105.93,"Edward Francis",1.98,0.0187
+23,"U2",105.93,"Marc Dubois",1.98,0.0187
+24,"U2",105.93,"Isabelle Mercier",1.98,0.0187
+25,"U2",105.93,"Steve Murray",1.98,0.0187
+26,"U2",105.93,"Luís Gonçalves",0.99,0.0093
+27,"U2",105.93,"Frank Harris",0.99,0.0093
+28,"U2",105.93,"Dan Miller",0.99,0.0093
+29,"U2",105.93,"Dominique Lefebvre",0.99,0.0093
+1,"Metallica",90.09,"Heather Leacock",8.91,0.0989
+2,"Metallica",90.09,"Wyatt Girard",8.91,0.0989
+3,"Metallica",90.09,"Hannah Schneider",7.92,0.0879
+4,"Metallica",90.09,"Frank Harris",5.94,0.0659
+5,"Metallica",90.09,"Jack Smith",5.94,0.0659
+6,"Metallica",90.09,"Diego Gutiérrez",5.94,0.0659
+7,"Metallica",90.09,"François Tremblay",4.95,0.0549
+8,"Metallica",90.09,"Phil Hughes",4.95,0.0549
+9,"Metallica",90.09,"Fernanda Ramos",3.96,0.044
+10,"Metallica",90.09,"Aaron Mitchell",3.96,0.044
+11,"Metallica",90.09,"Emma Jones",3.96,0.044
+12,"Metallica",90.09,"Kara Nielsen",1.98,0.022
+13,"Metallica",90.09,"Alexandre Rocha",1.98,0.022
+14,"Metallica",90.09,"Frank Ralston",1.98,0.022
+15,"Metallica",90.09,"Julia Barnett",1.98,0.022
+16,"Metallica",90.09,"Edward Francis",1.98,0.022
+17,"Metallica",90.09,"Martha Silk",1.98,0.022
+18,"Metallica",90.09,"Ellie Sullivan",1.98,0.022
+19,"Metallica",90.09,"Johannes Van der Berg",1.98,0.022
+20,"Metallica",90.09,"Enrique Muñoz",1.98,0.022
+21,"Metallica",90.09,"Leonie Köhler",0.99,0.011
+22,"Metallica",90.09,"Daan Peeters",0.99,0.011
+23,"Metallica",90.09,"John Gordon",0.99,0.011
+24,"Metallica",90.09,"Patrick Gray",0.99,0.011
+25,"Metallica",90.09,"Madalena Sampaio",0.99,0.011
+26,"Metallica",90.09,"Marc Dubois",0.99,0.011
+27,"Metallica",90.09,"Lucas Mancini",0.99,0.011
+1,"Led Zeppelin",86.13,"Bjørn Hansen",8.91,0.1034
+2,"Led Zeppelin",86.13,"Isabelle Mercier",8.91,0.1034
+3,"Led Zeppelin",86.13,"Michelle Brooks",5.94,0.069
+4,"Led Zeppelin",86.13,"Niklas Schröder",5.94,0.069
+5,"Led Zeppelin",86.13,"Luis Rojas",5.94,0.069
+6,"Led Zeppelin",86.13,"Frank Ralston",4.95,0.0575
+7,"Led Zeppelin",86.13,"Mark Philips",3.96,0.046
+8,"Led Zeppelin",86.13,"Jennifer Peterson",3.96,0.046
+9,"Led Zeppelin",86.13,"João Fernandes",3.96,0.046
+10,"Led Zeppelin",86.13,"Fynn Zimmermann",3.96,0.046
+11,"Led Zeppelin",86.13,"Phil Hughes",3.96,0.046
+12,"Led Zeppelin",86.13,"Leonie Köhler",1.98,0.023
+13,"Led Zeppelin",86.13,"Eduardo Martins",1.98,0.023
+14,"Led Zeppelin",86.13,"Roberto Almeida",1.98,0.023
+15,"Led Zeppelin",86.13,"Kathy Chase",1.98,0.023
+16,"Led Zeppelin",86.13,"Edward Francis",1.98,0.023
+17,"Led Zeppelin",86.13,"Aaron Mitchell",1.98,0.023
+18,"Led Zeppelin",86.13,"Stanisław Wójcik",1.98,0.023
+19,"Led Zeppelin",86.13,"Joakim Johansson",1.98,0.023
+20,"Led Zeppelin",86.13,"Emma Jones",1.98,0.023
+21,"Led Zeppelin",86.13,"Luís Gonçalves",0.99,0.0115
+22,"Led Zeppelin",86.13,"Kara Nielsen",0.99,0.0115
+23,"Led Zeppelin",86.13,"Robert Brown",0.99,0.0115
+24,"Led Zeppelin",86.13,"Martha Silk",0.99,0.0115
+25,"Led Zeppelin",86.13,"Marc Dubois",0.99,0.0115
+26,"Led Zeppelin",86.13,"Terhi Hämäläinen",0.99,0.0115
+27,"Led Zeppelin",86.13,"Steve Murray",0.99,0.0115
+28,"Led Zeppelin",86.13,"Puja Srivastava",0.99,0.0115
+1,"Lost",81.59,"Helena Holý",15.92,0.1951
+2,"Lost",81.59,"Hugh O'Reilly",15.92,0.1951
+3,"Lost",81.59,"Richard Cunningham",13.93,0.1707
+4,"Lost",81.59,"Astrid Gruber",9.95,0.122
+5,"Lost",81.59,"Isabelle Mercier",5.97,0.0732
+6,"Lost",81.59,"Luis Rojas",5.97,0.0732
+7,"Lost",81.59,"Bjørn Hansen",3.98,0.0488
+8,"Lost",81.59,"François Tremblay",1.99,0.0244
+9,"Lost",81.59,"Jennifer Peterson",1.99,0.0244
+10,"Lost",81.59,"Frank Ralston",1.99,0.0244
+11,"Lost",81.59,"Dominique Lefebvre",1.99,0.0244
+12,"Lost",81.59,"Ladislav Kovács",1.99,0.0244
+1,"The Office",49.75,"Frank Ralston",9.95,0.2
+2,"The Office",49.75,"Victor Stevens",9.95,0.2
+3,"The Office",49.75,"Ladislav Kovács",9.95,0.2
+4,"The Office",49.75,"František Wichterlová",3.98,0.08
+5,"The Office",49.75,"Dan Miller",3.98,0.08
+6,"The Office",49.75,"Heather Leacock",3.98,0.08
+7,"The Office",49.75,"Julia Barnett",3.98,0.08
+8,"The Office",49.75,"Tim Goyer",1.99,0.04
+9,"The Office",49.75,"Manoj Pareek",1.99,0.04
+1,"Os Paralamas Do Sucesso",44.55,"Luís Gonçalves",5.94,0.1333
+2,"Os Paralamas Do Sucesso",44.55,"Jennifer Peterson",5.94,0.1333
+3,"Os Paralamas Do Sucesso",44.55,"Alexandre Rocha",3.96,0.0889
+4,"Os Paralamas Do Sucesso",44.55,"Martha Silk",3.96,0.0889
+5,"Os Paralamas Do Sucesso",44.55,"Aaron Mitchell",3.96,0.0889
+6,"Os Paralamas Do Sucesso",44.55,"Madalena Sampaio",2.97,0.0667
+7,"Os Paralamas Do Sucesso",44.55,"Steve Murray",2.97,0.0667
+8,"Os Paralamas Do Sucesso",44.55,"Kara Nielsen",1.98,0.0444
+9,"Os Paralamas Do Sucesso",44.55,"Kathy Chase",1.98,0.0444
+10,"Os Paralamas Do Sucesso",44.55,"Patrick Gray",1.98,0.0444
+11,"Os Paralamas Do Sucesso",44.55,"Robert Brown",1.98,0.0444
+12,"Os Paralamas Do Sucesso",44.55,"Lucas Mancini",1.98,0.0444
+13,"Os Paralamas Do Sucesso",44.55,"Stanisław Wójcik",1.98,0.0444
+14,"Os Paralamas Do Sucesso",44.55,"Roberto Almeida",0.99,0.0222
+15,"Os Paralamas Do Sucesso",44.55,"Richard Cunningham",0.99,0.0222
+16,"Os Paralamas Do Sucesso",44.55,"Hugh O'Reilly",0.99,0.0222
+1,"Deep Purple",43.56,"Michelle Brooks",8.91,0.2045
+2,"Deep Purple",43.56,"Niklas Schröder",8.91,0.2045
+3,"Deep Purple",43.56,"Eduardo Martins",6.93,0.1591
+4,"Deep Purple",43.56,"Manoj Pareek",5.94,0.1364
+5,"Deep Purple",43.56,"Tim Goyer",3.96,0.0909
+6,"Deep Purple",43.56,"Stanisław Wójcik",3.96,0.0909
+7,"Deep Purple",43.56,"Dan Miller",1.98,0.0455
+8,"Deep Purple",43.56,"Martha Silk",0.99,0.0227
+9,"Deep Purple",43.56,"Camille Bernard",0.99,0.0227
+10,"Deep Purple",43.56,"Puja Srivastava",0.99,0.0227
+1,"Faith No More",41.58,"Daan Peeters",8.91,0.2143
+2,"Faith No More",41.58,"Wyatt Girard",5.94,0.1429
+3,"Faith No More",41.58,"Heather Leacock",4.95,0.119
+4,"Faith No More",41.58,"Julia Barnett",4.95,0.119
+5,"Faith No More",41.58,"Lucas Mancini",4.95,0.119
+6,"Faith No More",41.58,"Niklas Schröder",3.96,0.0952
+7,"Faith No More",41.58,"João Fernandes",1.98,0.0476
+8,"Faith No More",41.58,"Hannah Schneider",1.98,0.0476
+9,"Faith No More",41.58,"Diego Gutiérrez",1.98,0.0476
+10,"Faith No More",41.58,"Ellie Sullivan",0.99,0.0238
+11,"Faith No More",41.58,"Johannes Van der Berg",0.99,0.0238
+1,"Eric Clapton",39.6,"Leonie Köhler",5.94,0.15
+2,"Eric Clapton",39.6,"Michelle Brooks",3.96,0.1
+3,"Eric Clapton",39.6,"Dan Miller",3.96,0.1
+4,"Eric Clapton",39.6,"Lucas Mancini",3.96,0.1
+5,"Eric Clapton",39.6,"Luis Rojas",3.96,0.1
+6,"Eric Clapton",39.6,"Tim Goyer",2.97,0.075
+7,"Eric Clapton",39.6,"Mark Philips",1.98,0.05
+8,"Eric Clapton",39.6,"Frank Harris",1.98,0.05
+9,"Eric Clapton",39.6,"Aaron Mitchell",1.98,0.05
+10,"Eric Clapton",39.6,"João Fernandes",1.98,0.05
+11,"Eric Clapton",39.6,"Marc Dubois",1.98,0.05
+12,"Eric Clapton",39.6,"Fernanda Ramos",0.99,0.025
+13,"Eric Clapton",39.6,"Heather Leacock",0.99,0.025
+14,"Eric Clapton",39.6,"Martha Silk",0.99,0.025
+15,"Eric Clapton",39.6,"Hannah Schneider",0.99,0.025
+16,"Eric Clapton",39.6,"Fynn Zimmermann",0.99,0.025
+1,"R.E.M.",38.61,"Camille Bernard",4.95,0.1282
+2,"R.E.M.",38.61,"Phil Hughes",4.95,0.1282
+3,"R.E.M.",38.61,"Eduardo Martins",3.96,0.1026
+4,"R.E.M.",38.61,"Mark Philips",3.96,0.1026
+5,"R.E.M.",38.61,"Edward Francis",3.96,0.1026
+6,"R.E.M.",38.61,"Alexandre Rocha",2.97,0.0769
+7,"R.E.M.",38.61,"Helena Holý",1.98,0.0513
+8,"R.E.M.",38.61,"Daan Peeters",1.98,0.0513
+9,"R.E.M.",38.61,"Richard Cunningham",1.98,0.0513
+10,"R.E.M.",38.61,"Julia Barnett",1.98,0.0513
+11,"R.E.M.",38.61,"Puja Srivastava",1.98,0.0513
+12,"R.E.M.",38.61,"František Wichterlová",0.99,0.0256
+13,"R.E.M.",38.61,"Victor Stevens",0.99,0.0256
+14,"R.E.M.",38.61,"Ellie Sullivan",0.99,0.0256
+15,"R.E.M.",38.61,"Stanisław Wójcik",0.99,0.0256
+1,"Creedence Clearwater Revival",36.63,"Kara Nielsen",6.93,0.1892
+2,"Creedence Clearwater Revival",36.63,"Isabelle Mercier",5.94,0.1622
+3,"Creedence Clearwater Revival",36.63,"Robert Brown",3.96,0.1081
+4,"Creedence Clearwater Revival",36.63,"Camille Bernard",3.96,0.1081
+5,"Creedence Clearwater Revival",36.63,"Puja Srivastava",3.96,0.1081
+6,"Creedence Clearwater Revival",36.63,"John Gordon",2.97,0.0811
+7,"Creedence Clearwater Revival",36.63,"Fynn Zimmermann",1.98,0.0541
+8,"Creedence Clearwater Revival",36.63,"Mark Taylor",1.98,0.0541
+9,"Creedence Clearwater Revival",36.63,"Luis Rojas",1.98,0.0541
+10,"Creedence Clearwater Revival",36.63,"Bjørn Hansen",0.99,0.027
+11,"Creedence Clearwater Revival",36.63,"Dominique Lefebvre",0.99,0.027
+12,"Creedence Clearwater Revival",36.63,"Steve Murray",0.99,0.027
+1,"Queen",36.63,"Frank Ralston",3.96,0.1081
+2,"Queen",36.63,"Robert Brown",3.96,0.1081
+3,"Queen",36.63,"Ellie Sullivan",3.96,0.1081
+4,"Queen",36.63,"Dominique Lefebvre",3.96,0.1081
+5,"Queen",36.63,"Enrique Muñoz",3.96,0.1081
+6,"Queen",36.63,"Alexandre Rocha",2.97,0.0811
+7,"Queen",36.63,"Leonie Köhler",1.98,0.0541
+8,"Queen",36.63,"Niklas Schröder",1.98,0.0541
+9,"Queen",36.63,"Terhi Hämäläinen",1.98,0.0541
+10,"Queen",36.63,"Ladislav Kovács",1.98,0.0541
+11,"Queen",36.63,"Lucas Mancini",1.98,0.0541
+12,"Queen",36.63,"Patrick Gray",0.99,0.027
+13,"Queen",36.63,"Edward Francis",0.99,0.027
+14,"Queen",36.63,"Marc Dubois",0.99,0.027
+15,"Queen",36.63,"Stanisław Wójcik",0.99,0.027
+1,"Battlestar Galactica (Classic)",35.82,"Julia Barnett",7.96,0.2222
+2,"Battlestar Galactica (Classic)",35.82,"Terhi Hämäläinen",7.96,0.2222
+3,"Battlestar Galactica (Classic)",35.82,"Johannes Van der Berg",5.97,0.1667
+4,"Battlestar Galactica (Classic)",35.82,"Luís Gonçalves",3.98,0.1111
+5,"Battlestar Galactica (Classic)",35.82,"Wyatt Girard",3.98,0.1111
+6,"Battlestar Galactica (Classic)",35.82,"João Fernandes",1.99,0.0556
+7,"Battlestar Galactica (Classic)",35.82,"Ladislav Kovács",1.99,0.0556
+8,"Battlestar Galactica (Classic)",35.82,"Puja Srivastava",1.99,0.0556
+1,"Guns N' Roses",35.64,"Luís Gonçalves",5.94,0.1667
+2,"Guns N' Roses",35.64,"Richard Cunningham",5.94,0.1667
+3,"Guns N' Roses",35.64,"Hugh O'Reilly",5.94,0.1667
+4,"Guns N' Roses",35.64,"Jack Smith",3.96,0.1111
+5,"Guns N' Roses",35.64,"Kathy Chase",2.97,0.0833
+6,"Guns N' Roses",35.64,"Astrid Gruber",1.98,0.0556
+7,"Guns N' Roses",35.64,"Fernanda Ramos",1.98,0.0556
+8,"Guns N' Roses",35.64,"Jennifer Peterson",1.98,0.0556
+9,"Guns N' Roses",35.64,"Dominique Lefebvre",1.98,0.0556
+10,"Guns N' Roses",35.64,"Diego Gutiérrez",1.98,0.0556
+11,"Guns N' Roses",35.64,"Roberto Almeida",0.99,0.0278
+1,"Titãs",33.66,"Jack Smith",5.94,0.1765
+2,"Titãs",33.66,"Martha Silk",4.95,0.1471
+3,"Titãs",33.66,"Joakim Johansson",4.95,0.1471
+4,"Titãs",33.66,"Diego Gutiérrez",4.95,0.1471
+5,"Titãs",33.66,"Lucas Mancini",3.96,0.1176
+6,"Titãs",33.66,"Fynn Zimmermann",2.97,0.0882
+7,"Titãs",33.66,"Isabelle Mercier",1.98,0.0588
+8,"Titãs",33.66,"Ladislav Kovács",1.98,0.0588
+9,"Titãs",33.66,"Helena Holý",0.99,0.0294
+10,"Titãs",33.66,"Wyatt Girard",0.99,0.0294
+1,"Green Day",32.67,"Kathy Chase",3.96,0.1212
+2,"Green Day",32.67,"František Wichterlová",2.97,0.0909
+3,"Green Day",32.67,"Victor Stevens",2.97,0.0909
+4,"Green Day",32.67,"Richard Cunningham",2.97,0.0909
+5,"Green Day",32.67,"Edward Francis",2.97,0.0909
+6,"Green Day",32.67,"Dominique Lefebvre",2.97,0.0909
+7,"Green Day",32.67,"Enrique Muñoz",2.97,0.0909
+8,"Green Day",32.67,"Emma Jones",1.98,0.0606
+9,"Green Day",32.67,"Steve Murray",1.98,0.0606
+10,"Green Day",32.67,"Diego Gutiérrez",1.98,0.0606
+11,"Green Day",32.67,"Luis Rojas",1.98,0.0606
+12,"Green Day",32.67,"Alexandre Rocha",0.99,0.0303
+13,"Green Day",32.67,"Tim Goyer",0.99,0.0303
+14,"Green Day",32.67,"Joakim Johansson",0.99,0.0303
+1,"Pearl Jam",31.68,"Edward Francis",7.92,0.25
+2,"Pearl Jam",31.68,"Eduardo Martins",6.93,0.2188
+3,"Pearl Jam",31.68,"Enrique Muñoz",5.94,0.1875
+4,"Pearl Jam",31.68,"Leonie Köhler",4.95,0.1563
+5,"Pearl Jam",31.68,"Alexandre Rocha",3.96,0.125
+6,"Pearl Jam",31.68,"Marc Dubois",1.98,0.0625
+1,"Kiss",30.69,"Terhi Hämäläinen",4.95,0.1613
+2,"Kiss",30.69,"Luís Gonçalves",3.96,0.129
+3,"Kiss",30.69,"Edward Francis",3.96,0.129
+4,"Kiss",30.69,"Ellie Sullivan",2.97,0.0968
+5,"Kiss",30.69,"Leonie Köhler",1.98,0.0645
+6,"Kiss",30.69,"Jennifer Peterson",1.98,0.0645
+7,"Kiss",30.69,"Fynn Zimmermann",1.98,0.0645
+8,"Kiss",30.69,"Steve Murray",1.98,0.0645
+9,"Kiss",30.69,"Diego Gutiérrez",1.98,0.0645
+10,"Kiss",30.69,"Manoj Pareek",1.98,0.0645
+11,"Kiss",30.69,"João Fernandes",0.99,0.0323
+12,"Kiss",30.69,"Johannes Van der Berg",0.99,0.0323
+13,"Kiss",30.69,"Mark Taylor",0.99,0.0323
+1,"Van Halen",28.71,"Hannah Schneider",7.92,0.2759
+2,"Van Halen",28.71,"Frank Harris",5.94,0.2069
+3,"Van Halen",28.71,"Terhi Hämäläinen",5.94,0.2069
+4,"Van Halen",28.71,"František Wichterlová",3.96,0.1379
+5,"Van Halen",28.71,"Victor Stevens",1.98,0.069
+6,"Van Halen",28.71,"Mark Taylor",1.98,0.069
+7,"Van Halen",28.71,"Edward Francis",0.99,0.0345
+1,"Various Artists",28.71,"Luís Gonçalves",3.96,0.1379
+2,"Various Artists",28.71,"Marc Dubois",3.96,0.1379
+3,"Various Artists",28.71,"John Gordon",2.97,0.1034
+4,"Various Artists",28.71,"Dominique Lefebvre",2.97,0.1034
+5,"Various Artists",28.71,"Leonie Köhler",1.98,0.069
+6,"Various Artists",28.71,"Dan Miller",1.98,0.069
+7,"Various Artists",28.71,"Kathy Chase",1.98,0.069
+8,"Various Artists",28.71,"Madalena Sampaio",1.98,0.069
+9,"Various Artists",28.71,"Camille Bernard",1.98,0.069
+10,"Various Artists",28.71,"François Tremblay",0.99,0.0345
+11,"Various Artists",28.71,"Kara Nielsen",0.99,0.0345
+12,"Various Artists",28.71,"Tim Goyer",0.99,0.0345
+13,"Various Artists",28.71,"João Fernandes",0.99,0.0345
+14,"Various Artists",28.71,"Puja Srivastava",0.99,0.0345
+1,"Chico Buarque",26.73,"Richard Cunningham",4.95,0.1852
+2,"Chico Buarque",26.73,"Wyatt Girard",3.96,0.1481
+3,"Chico Buarque",26.73,"Roberto Almeida",2.97,0.1111
+4,"Chico Buarque",26.73,"Joakim Johansson",2.97,0.1111
+5,"Chico Buarque",26.73,"Alexandre Rocha",1.98,0.0741
+6,"Chico Buarque",26.73,"Martha Silk",1.98,0.0741
+7,"Chico Buarque",26.73,"Niklas Schröder",1.98,0.0741
+8,"Chico Buarque",26.73,"Dominique Lefebvre",1.98,0.0741
+9,"Chico Buarque",26.73,"Puja Srivastava",1.98,0.0741
+10,"Chico Buarque",26.73,"Fynn Zimmermann",0.99,0.037
+11,"Chico Buarque",26.73,"Camille Bernard",0.99,0.037
+1,"Red Hot Chili Peppers",26.73,"Dominique Lefebvre",7.92,0.2963
+2,"Red Hot Chili Peppers",26.73,"Johannes Van der Berg",5.94,0.2222
+3,"Red Hot Chili Peppers",26.73,"Dan Miller",4.95,0.1852
+4,"Red Hot Chili Peppers",26.73,"Kara Nielsen",3.96,0.1481
+5,"Red Hot Chili Peppers",26.73,"Robert Brown",1.98,0.0741
+6,"Red Hot Chili Peppers",26.73,"Puja Srivastava",1.98,0.0741
+1,"Heroes",25.87,"Fynn Zimmermann",5.97,0.2308
+2,"Heroes",25.87,"Luis Rojas",5.97,0.2308
+3,"Heroes",25.87,"Helena Holý",3.98,0.1538
+4,"Heroes",25.87,"Richard Cunningham",3.98,0.1538
+5,"Heroes",25.87,"František Wichterlová",1.99,0.0769
+6,"Heroes",25.87,"Camille Bernard",1.99,0.0769
+7,"Heroes",25.87,"Ladislav Kovács",1.99,0.0769
+1,"Lenny Kravitz",25.74,"Terhi Hämäläinen",4.95,0.1923
+2,"Lenny Kravitz",25.74,"František Wichterlová",1.98,0.0769
+3,"Lenny Kravitz",25.74,"Kara Nielsen",1.98,0.0769
+4,"Lenny Kravitz",25.74,"Eduardo Martins",1.98,0.0769
+5,"Lenny Kravitz",25.74,"Fernanda Ramos",1.98,0.0769
+6,"Lenny Kravitz",25.74,"Ladislav Kovács",1.98,0.0769
+7,"Lenny Kravitz",25.74,"Stanisław Wójcik",1.98,0.0769
+8,"Lenny Kravitz",25.74,"Enrique Muñoz",1.98,0.0769
+9,"Lenny Kravitz",25.74,"Alexandre Rocha",0.99,0.0385
+10,"Lenny Kravitz",25.74,"Victor Stevens",0.99,0.0385
+11,"Lenny Kravitz",25.74,"Robert Brown",0.99,0.0385
+12,"Lenny Kravitz",25.74,"Edward Francis",0.99,0.0385
+13,"Lenny Kravitz",25.74,"Ellie Sullivan",0.99,0.0385
+14,"Lenny Kravitz",25.74,"Johannes Van der Berg",0.99,0.0385
+15,"Lenny Kravitz",25.74,"Emma Jones",0.99,0.0385
+1,"Chico Science & Nação Zumbi",24.75,"Roberto Almeida",5.94,0.24
+2,"Chico Science & Nação Zumbi",24.75,"Aaron Mitchell",5.94,0.24
+3,"Chico Science & Nação Zumbi",24.75,"Hugh O'Reilly",5.94,0.24
+4,"Chico Science & Nação Zumbi",24.75,"Luís Gonçalves",2.97,0.12
+5,"Chico Science & Nação Zumbi",24.75,"Joakim Johansson",1.98,0.08
+6,"Chico Science & Nação Zumbi",24.75,"Emma Jones",1.98,0.08
+1,"Battlestar Galactica",23.88,"Fynn Zimmermann",5.97,0.25
+2,"Battlestar Galactica",23.88,"Luis Rojas",5.97,0.25
+3,"Battlestar Galactica",23.88,"Helena Holý",3.98,0.1667
+4,"Battlestar Galactica",23.88,"Jack Smith",3.98,0.1667
+5,"Battlestar Galactica",23.88,"Richard Cunningham",1.99,0.0833
+6,"Battlestar Galactica",23.88,"Joakim Johansson",1.99,0.0833
+1,"Ozzy Osbourne",23.76,"Joakim Johansson",3.96,0.1667
+2,"Ozzy Osbourne",23.76,"Luís Gonçalves",2.97,0.125
+3,"Ozzy Osbourne",23.76,"Kara Nielsen",2.97,0.125
+4,"Ozzy Osbourne",23.76,"Kathy Chase",2.97,0.125
+5,"Ozzy Osbourne",23.76,"Madalena Sampaio",2.97,0.125
+6,"Ozzy Osbourne",23.76,"Mark Taylor",2.97,0.125
+7,"Ozzy Osbourne",23.76,"João Fernandes",1.98,0.0833
+8,"Ozzy Osbourne",23.76,"Steve Murray",1.98,0.0833
+9,"Ozzy Osbourne",23.76,"Marc Dubois",0.99,0.0417
+1,"Smashing Pumpkins",23.76,"Daan Peeters",3.96,0.1667
+2,"Smashing Pumpkins",23.76,"Robert Brown",3.96,0.1667
+3,"Smashing Pumpkins",23.76,"Stanisław Wójcik",3.96,0.1667
+4,"Smashing Pumpkins",23.76,"Kara Nielsen",2.97,0.125
+5,"Smashing Pumpkins",23.76,"Bjørn Hansen",1.98,0.0833
+6,"Smashing Pumpkins",23.76,"Helena Holý",1.98,0.0833
+7,"Smashing Pumpkins",23.76,"Roberto Almeida",1.98,0.0833
+8,"Smashing Pumpkins",23.76,"François Tremblay",0.99,0.0417
+9,"Smashing Pumpkins",23.76,"John Gordon",0.99,0.0417
+10,"Smashing Pumpkins",23.76,"Frank Ralston",0.99,0.0417
+1,"Tim Maia",23.76,"Alexandre Rocha",5.94,0.25
+2,"Tim Maia",23.76,"Patrick Gray",3.96,0.1667
+3,"Tim Maia",23.76,"Diego Gutiérrez",3.96,0.1667
+4,"Tim Maia",23.76,"John Gordon",1.98,0.0833
+5,"Tim Maia",23.76,"Victor Stevens",1.98,0.0833
+6,"Tim Maia",23.76,"Julia Barnett",1.98,0.0833
+7,"Tim Maia",23.76,"Jack Smith",0.99,0.0417
+8,"Tim Maia",23.76,"Heather Leacock",0.99,0.0417
+9,"Tim Maia",23.76,"Martha Silk",0.99,0.0417
+10,"Tim Maia",23.76,"Enrique Muñoz",0.99,0.0417
+1,"Antônio Carlos Jobim",21.78,"Dan Miller",3.96,0.1818
+2,"Antônio Carlos Jobim",21.78,"Leonie Köhler",1.98,0.0909
+3,"Antônio Carlos Jobim",21.78,"Mark Philips",1.98,0.0909
+4,"Antônio Carlos Jobim",21.78,"Frank Harris",1.98,0.0909
+5,"Antônio Carlos Jobim",21.78,"Michelle Brooks",1.98,0.0909
+6,"Antônio Carlos Jobim",21.78,"Kathy Chase",1.98,0.0909
+7,"Antônio Carlos Jobim",21.78,"Heather Leacock",1.98,0.0909
+8,"Antônio Carlos Jobim",21.78,"Marc Dubois",1.98,0.0909
+9,"Antônio Carlos Jobim",21.78,"François Tremblay",0.99,0.0455
+10,"Antônio Carlos Jobim",21.78,"Jennifer Peterson",0.99,0.0455
+11,"Antônio Carlos Jobim",21.78,"Wyatt Girard",0.99,0.0455
+12,"Antônio Carlos Jobim",21.78,"Phil Hughes",0.99,0.0455
+1,"Foo Fighters",21.78,"Jack Smith",4.95,0.2273
+2,"Foo Fighters",21.78,"Johannes Van der Berg",4.95,0.2273
+3,"Foo Fighters",21.78,"Diego Gutiérrez",4.95,0.2273
+4,"Foo Fighters",21.78,"Fynn Zimmermann",3.96,0.1818
+5,"Foo Fighters",21.78,"Julia Barnett",1.98,0.0909
+6,"Foo Fighters",21.78,"Luis Rojas",0.99,0.0455
+1,"Caetano Veloso",20.79,"Helena Holý",4.95,0.2381
+2,"Caetano Veloso",20.79,"Heather Leacock",3.96,0.1905
+3,"Caetano Veloso",20.79,"Joakim Johansson",3.96,0.1905
+4,"Caetano Veloso",20.79,"Michelle Brooks",1.98,0.0952
+5,"Caetano Veloso",20.79,"Dan Miller",1.98,0.0952
+6,"Caetano Veloso",20.79,"John Gordon",1.98,0.0952
+7,"Caetano Veloso",20.79,"Jack Smith",0.99,0.0476
+8,"Caetano Veloso",20.79,"Richard Cunningham",0.99,0.0476
+1,"Cássia Eller",20.79,"Bjørn Hansen",4.95,0.2381
+2,"Cássia Eller",20.79,"Robert Brown",4.95,0.2381
+3,"Cássia Eller",20.79,"Stanisław Wójcik",4.95,0.2381
+4,"Cássia Eller",20.79,"Michelle Brooks",2.97,0.1429
+5,"Cássia Eller",20.79,"Eduardo Martins",1.98,0.0952
+6,"Cássia Eller",20.79,"Kara Nielsen",0.99,0.0476
+1,"Gilberto Gil",19.8,"Frank Harris",3.96,0.2
+2,"Gilberto Gil",19.8,"Fynn Zimmermann",3.96,0.2
+3,"Gilberto Gil",19.8,"Jack Smith",2.97,0.15
+4,"Gilberto Gil",19.8,"Luis Rojas",2.97,0.15
+5,"Gilberto Gil",19.8,"Roberto Almeida",1.98,0.1
+6,"Gilberto Gil",19.8,"Mark Philips",1.98,0.1
+7,"Gilberto Gil",19.8,"Alexandre Rocha",0.99,0.05
+8,"Gilberto Gil",19.8,"Diego Gutiérrez",0.99,0.05
+1,"Spyro Gyra",19.8,"František Wichterlová",2.97,0.15
+2,"Spyro Gyra",19.8,"Jack Smith",1.98,0.1
+3,"Spyro Gyra",19.8,"Michelle Brooks",1.98,0.1
+4,"Spyro Gyra",19.8,"Edward Francis",1.98,0.1
+5,"Spyro Gyra",19.8,"Aaron Mitchell",1.98,0.1
+6,"Spyro Gyra",19.8,"Terhi Hämäläinen",1.98,0.1
+7,"Spyro Gyra",19.8,"Enrique Muñoz",1.98,0.1
+8,"Spyro Gyra",19.8,"Frank Harris",0.99,0.05
+9,"Spyro Gyra",19.8,"Tim Goyer",0.99,0.05
+10,"Spyro Gyra",19.8,"Isabelle Mercier",0.99,0.05
+11,"Spyro Gyra",19.8,"Hugh O'Reilly",0.99,0.05
+12,"Spyro Gyra",19.8,"Stanisław Wójcik",0.99,0.05
+1,"The Who",18.81,"Enrique Muñoz",4.95,0.2632
+2,"The Who",18.81,"Astrid Gruber",3.96,0.2105
+3,"The Who",18.81,"Julia Barnett",2.97,0.1579
+4,"The Who",18.81,"François Tremblay",1.98,0.1053
+5,"The Who",18.81,"František Wichterlová",1.98,0.1053
+6,"The Who",18.81,"Daan Peeters",1.98,0.1053
+7,"The Who",18.81,"Leonie Köhler",0.99,0.0526
+1,"Amy Winehouse",17.82,"Astrid Gruber",3.96,0.2222
+2,"Amy Winehouse",17.82,"John Gordon",3.96,0.2222
+3,"Amy Winehouse",17.82,"Tim Goyer",1.98,0.1111
+4,"Amy Winehouse",17.82,"Kathy Chase",1.98,0.1111
+5,"Amy Winehouse",17.82,"Frank Ralston",1.98,0.1111
+6,"Amy Winehouse",17.82,"Patrick Gray",1.98,0.1111
+7,"Amy Winehouse",17.82,"Fernanda Ramos",0.99,0.0556
+8,"Amy Winehouse",17.82,"Michelle Brooks",0.99,0.0556
+1,"Djavan",17.82,"Fynn Zimmermann",3.96,0.2222
+2,"Djavan",17.82,"Tim Goyer",2.97,0.1667
+3,"Djavan",17.82,"Manoj Pareek",2.97,0.1667
+4,"Djavan",17.82,"Ellie Sullivan",1.98,0.1111
+5,"Djavan",17.82,"Madalena Sampaio",1.98,0.1111
+6,"Djavan",17.82,"Niklas Schröder",1.98,0.1111
+7,"Djavan",17.82,"Aaron Mitchell",0.99,0.0556
+8,"Djavan",17.82,"Marc Dubois",0.99,0.0556
+1,"Jamiroquai",17.82,"Helena Holý",5.94,0.3333
+2,"Jamiroquai",17.82,"Ladislav Kovács",4.95,0.2778
+3,"Jamiroquai",17.82,"Mark Philips",2.97,0.1667
+4,"Jamiroquai",17.82,"João Fernandes",2.97,0.1667
+5,"Jamiroquai",17.82,"Victor Stevens",0.99,0.0556
+1,"The Rolling Stones",17.82,"Daan Peeters",4.95,0.2778
+2,"The Rolling Stones",17.82,"Lucas Mancini",4.95,0.2778
+3,"The Rolling Stones",17.82,"Patrick Gray",3.96,0.2222
+4,"The Rolling Stones",17.82,"Julia Barnett",3.96,0.2222
+1,"Gene Krupa",16.83,"Manoj Pareek",3.96,0.2353
+2,"Gene Krupa",16.83,"Dominique Lefebvre",2.97,0.1765
+3,"Gene Krupa",16.83,"Dan Miller",1.98,0.1176
+4,"Gene Krupa",16.83,"Steve Murray",1.98,0.1176
+5,"Gene Krupa",16.83,"Diego Gutiérrez",1.98,0.1176
+6,"Gene Krupa",16.83,"Puja Srivastava",1.98,0.1176
+7,"Gene Krupa",16.83,"François Tremblay",0.99,0.0588
+8,"Gene Krupa",16.83,"Phil Hughes",0.99,0.0588
+1,"Legião Urbana",16.83,"Terhi Hämäläinen",4.95,0.2941
+2,"Legião Urbana",16.83,"Frank Ralston",3.96,0.2353
+3,"Legião Urbana",16.83,"Emma Jones",3.96,0.2353
+4,"Legião Urbana",16.83,"Fernanda Ramos",2.97,0.1765
+5,"Legião Urbana",16.83,"Ellie Sullivan",0.99,0.0588
+1,"Miles Davis",16.83,"Dominique Lefebvre",2.97,0.1765
+2,"Miles Davis",16.83,"Puja Srivastava",2.97,0.1765
+3,"Miles Davis",16.83,"François Tremblay",1.98,0.1176
+4,"Miles Davis",16.83,"Dan Miller",1.98,0.1176
+5,"Miles Davis",16.83,"John Gordon",1.98,0.1176
+6,"Miles Davis",16.83,"Martha Silk",1.98,0.1176
+7,"Miles Davis",16.83,"Camille Bernard",1.98,0.1176
+8,"Miles Davis",16.83,"Joakim Johansson",0.99,0.0588
+1,"The Tea Party",16.83,"Hugh O'Reilly",3.96,0.2353
+2,"The Tea Party",16.83,"Daan Peeters",2.97,0.1765
+3,"The Tea Party",16.83,"Julia Barnett",2.97,0.1765
+4,"The Tea Party",16.83,"Wyatt Girard",1.98,0.1176
+5,"The Tea Party",16.83,"Terhi Hämäläinen",1.98,0.1176
+6,"The Tea Party",16.83,"Lucas Mancini",1.98,0.1176
+7,"The Tea Party",16.83,"Marc Dubois",0.99,0.0588
+1,"AC/DC",15.84,"Bjørn Hansen",3.96,0.25
+2,"AC/DC",15.84,"Fernanda Ramos",2.97,0.1875
+3,"AC/DC",15.84,"Ellie Sullivan",2.97,0.1875
+4,"AC/DC",15.84,"Lucas Mancini",2.97,0.1875
+5,"AC/DC",15.84,"Daan Peeters",1.98,0.125
+6,"AC/DC",15.84,"Phil Hughes",0.99,0.0625
+1,"Audioslave",15.84,"François Tremblay",2.97,0.1875
+2,"Audioslave",15.84,"Wyatt Girard",2.97,0.1875
+3,"Audioslave",15.84,"Heather Leacock",1.98,0.125
+4,"Audioslave",15.84,"John Gordon",1.98,0.125
+5,"Audioslave",15.84,"Frank Ralston",1.98,0.125
+6,"Audioslave",15.84,"Isabelle Mercier",1.98,0.125
+7,"Audioslave",15.84,"Bjørn Hansen",0.99,0.0625
+8,"Audioslave",15.84,"Mark Philips",0.99,0.0625
+1,"Cidade Negra",15.84,"Emma Jones",4.95,0.3125
+2,"Cidade Negra",15.84,"Kathy Chase",3.96,0.25
+3,"Cidade Negra",15.84,"Luís Gonçalves",2.97,0.1875
+4,"Cidade Negra",15.84,"Aaron Mitchell",2.97,0.1875
+5,"Cidade Negra",15.84,"Marc Dubois",0.99,0.0625
+1,"The Cult",15.84,"Tim Goyer",4.95,0.3125
+2,"The Cult",15.84,"Patrick Gray",3.96,0.25
+3,"The Cult",15.84,"Lucas Mancini",2.97,0.1875
+4,"The Cult",15.84,"Daan Peeters",1.98,0.125
+5,"The Cult",15.84,"Manoj Pareek",1.98,0.125
+1,"Milton Nascimento",14.85,"John Gordon",4.95,0.3333
+2,"Milton Nascimento",14.85,"Martha Silk",2.97,0.2
+3,"Milton Nascimento",14.85,"Joakim Johansson",2.97,0.2
+4,"Milton Nascimento",14.85,"François Tremblay",1.98,0.1333
+5,"Milton Nascimento",14.85,"Roberto Almeida",1.98,0.1333
+1,"Soundgarden",14.85,"Roberto Almeida",3.96,0.2667
+2,"Soundgarden",14.85,"Julia Barnett",3.96,0.2667
+3,"Soundgarden",14.85,"Richard Cunningham",1.98,0.1333
+4,"Soundgarden",14.85,"Stanisław Wójcik",1.98,0.1333
+5,"Soundgarden",14.85,"Frank Ralston",0.99,0.0667
+6,"Soundgarden",14.85,"Robert Brown",0.99,0.0667
+7,"Soundgarden",14.85,"Aaron Mitchell",0.99,0.0667
+1,"Toquinho & Vinícius",14.85,"François Tremblay",3.96,0.2667
+2,"Toquinho & Vinícius",14.85,"Tim Goyer",2.97,0.2
+3,"Toquinho & Vinícius",14.85,"Jennifer Peterson",1.98,0.1333
+4,"Toquinho & Vinícius",14.85,"Jack Smith",1.98,0.1333
+5,"Toquinho & Vinícius",14.85,"Dan Miller",1.98,0.1333
+6,"Toquinho & Vinícius",14.85,"Mark Philips",0.99,0.0667
+7,"Toquinho & Vinícius",14.85,"Dominique Lefebvre",0.99,0.0667
+1,"The Black Crowes",13.86,"Fernanda Ramos",4.95,0.3571
+2,"The Black Crowes",13.86,"Niklas Schröder",3.96,0.2857
+3,"The Black Crowes",13.86,"Manoj Pareek",2.97,0.2143
+4,"The Black Crowes",13.86,"Michelle Brooks",0.99,0.0714
+5,"The Black Crowes",13.86,"Patrick Gray",0.99,0.0714
+1,"Elis Regina",12.87,"Marc Dubois",2.97,0.2308
+2,"Elis Regina",12.87,"Phil Hughes",1.98,0.1538
+3,"Elis Regina",12.87,"Mark Taylor",1.98,0.1538
+4,"Elis Regina",12.87,"Luis Rojas",1.98,0.1538
+5,"Elis Regina",12.87,"Manoj Pareek",1.98,0.1538
+6,"Elis Regina",12.87,"Tim Goyer",0.99,0.0769
+7,"Elis Regina",12.87,"Emma Jones",0.99,0.0769
+1,"Lulu Santos",12.87,"Emma Jones",3.96,0.3077
+2,"Lulu Santos",12.87,"Fernanda Ramos",2.97,0.2308
+3,"Lulu Santos",12.87,"Ellie Sullivan",2.97,0.2308
+4,"Lulu Santos",12.87,"Phil Hughes",2.97,0.2308
+1,"O Terço",12.87,"Enrique Muñoz",2.97,0.2308
+2,"O Terço",12.87,"Aaron Mitchell",1.98,0.1538
+3,"O Terço",12.87,"Hugh O'Reilly",1.98,0.1538
+4,"O Terço",12.87,"Johannes Van der Berg",1.98,0.1538
+5,"O Terço",12.87,"Joakim Johansson",1.98,0.1538
+6,"O Terço",12.87,"Roberto Almeida",0.99,0.0769
+7,"O Terço",12.87,"Ladislav Kovács",0.99,0.0769
+1,"Bruce Dickinson",11.88,"Ladislav Kovács",2.97,0.25
+2,"Bruce Dickinson",11.88,"François Tremblay",1.98,0.1667
+3,"Bruce Dickinson",11.88,"Luis Rojas",1.98,0.1667
+4,"Bruce Dickinson",11.88,"Puja Srivastava",1.98,0.1667
+5,"Bruce Dickinson",11.88,"Leonie Köhler",0.99,0.0833
+6,"Bruce Dickinson",11.88,"John Gordon",0.99,0.0833
+7,"Bruce Dickinson",11.88,"Diego Gutiérrez",0.99,0.0833
+1,"James Brown",11.88,"Puja Srivastava",3.96,0.3333
+2,"James Brown",11.88,"Victor Stevens",2.97,0.25
+3,"James Brown",11.88,"Ladislav Kovács",2.97,0.25
+4,"James Brown",11.88,"Mark Philips",1.98,0.1667
+1,"Nirvana",11.88,"Roberto Almeida",3.96,0.3333
+2,"Nirvana",11.88,"Aaron Mitchell",2.97,0.25
+3,"Nirvana",11.88,"Joakim Johansson",2.97,0.25
+4,"Nirvana",11.88,"Martha Silk",1.98,0.1667
+1,"Santana",11.88,"Robert Brown",1.98,0.1667
+2,"Santana",11.88,"Dominique Lefebvre",1.98,0.1667
+3,"Santana",11.88,"Johannes Van der Berg",1.98,0.1667
+4,"Santana",11.88,"Puja Srivastava",1.98,0.1667
+5,"Santana",11.88,"Kara Nielsen",0.99,0.0833
+6,"Santana",11.88,"Dan Miller",0.99,0.0833
+7,"Santana",11.88,"Camille Bernard",0.99,0.0833
+8,"Santana",11.88,"Stanisław Wójcik",0.99,0.0833
+1,"System Of A Down",11.88,"Kara Nielsen",3.96,0.3333
+2,"System Of A Down",11.88,"Astrid Gruber",1.98,0.1667
+3,"System Of A Down",11.88,"Michelle Brooks",1.98,0.1667
+4,"System Of A Down",11.88,"Niklas Schröder",1.98,0.1667
+5,"System Of A Down",11.88,"Emma Jones",1.98,0.1667
+1,"Body Count",10.89,"Marc Dubois",3.96,0.3636
+2,"Body Count",10.89,"François Tremblay",1.98,0.1818
+3,"Body Count",10.89,"John Gordon",1.98,0.1818
+4,"Body Count",10.89,"Camille Bernard",0.99,0.0909
+5,"Body Count",10.89,"Wyatt Girard",0.99,0.0909
+6,"Body Count",10.89,"Ladislav Kovács",0.99,0.0909
+1,"Aerosmith",9.9,"Daan Peeters",3.96,0.4
+2,"Aerosmith",9.9,"Phil Hughes",2.97,0.3
+3,"Aerosmith",9.9,"Ellie Sullivan",1.98,0.2
+4,"Aerosmith",9.9,"Heather Leacock",0.99,0.1
+1,"Frank Sinatra",9.9,"Jack Smith",2.97,0.3
+2,"Frank Sinatra",9.9,"Luis Rojas",2.97,0.3
+3,"Frank Sinatra",9.9,"Fynn Zimmermann",1.98,0.2
+4,"Frank Sinatra",9.9,"Diego Gutiérrez",1.98,0.2
+1,"Judas Priest",9.9,"Robert Brown",1.98,0.2
+2,"Judas Priest",9.9,"Martha Silk",1.98,0.2
+3,"Judas Priest",9.9,"Steve Murray",1.98,0.2
+4,"Judas Priest",9.9,"Jennifer Peterson",0.99,0.1
+5,"Judas Priest",9.9,"Julia Barnett",0.99,0.1
+6,"Judas Priest",9.9,"Ellie Sullivan",0.99,0.1
+7,"Judas Priest",9.9,"João Fernandes",0.99,0.1
+1,"Marvin Gaye",9.9,"Daan Peeters",1.98,0.2
+2,"Marvin Gaye",9.9,"Fernanda Ramos",1.98,0.2
+3,"Marvin Gaye",9.9,"Ellie Sullivan",1.98,0.2
+4,"Marvin Gaye",9.9,"Phil Hughes",1.98,0.2
+5,"Marvin Gaye",9.9,"Astrid Gruber",0.99,0.1
+6,"Marvin Gaye",9.9,"Eduardo Martins",0.99,0.1
+1,"Olodum",9.9,"Steve Murray",2.97,0.3
+2,"Olodum",9.9,"Astrid Gruber",1.98,0.2
+3,"Olodum",9.9,"Roberto Almeida",1.98,0.2
+4,"Olodum",9.9,"Helena Holý",0.99,0.1
+5,"Olodum",9.9,"Aaron Mitchell",0.99,0.1
+6,"Olodum",9.9,"Enrique Muñoz",0.99,0.1
+1,"Raul Seixas",9.9,"João Fernandes",3.96,0.4
+2,"Raul Seixas",9.9,"Dan Miller",2.97,0.3
+3,"Raul Seixas",9.9,"Puja Srivastava",1.98,0.2
+4,"Raul Seixas",9.9,"Johannes Van der Berg",0.99,0.1
+1,"Skank",9.9,"Robert Brown",2.97,0.3
+2,"Skank",9.9,"Johannes Van der Berg",2.97,0.3
+3,"Skank",9.9,"Kara Nielsen",1.98,0.2
+4,"Skank",9.9,"Stanisław Wójcik",1.98,0.2
+1,"Stone Temple Pilots",9.9,"Emma Jones",2.97,0.3
+2,"Stone Temple Pilots",9.9,"František Wichterlová",1.98,0.2
+3,"Stone Temple Pilots",9.9,"Michelle Brooks",1.98,0.2
+4,"Stone Temple Pilots",9.9,"Bjørn Hansen",0.99,0.1
+5,"Stone Temple Pilots",9.9,"Aaron Mitchell",0.99,0.1
+6,"Stone Temple Pilots",9.9,"Niklas Schröder",0.99,0.1
+1,"The Clash",9.9,"Tim Goyer",2.97,0.3
+2,"The Clash",9.9,"Manoj Pareek",2.97,0.3
+3,"The Clash",9.9,"Patrick Gray",1.98,0.2
+4,"The Clash",9.9,"Niklas Schröder",0.99,0.1
+5,"The Clash",9.9,"Lucas Mancini",0.99,0.1
+1,"Black Sabbath",8.91,"John Gordon",1.98,0.2222
+2,"Black Sabbath",8.91,"Fynn Zimmermann",1.98,0.2222
+3,"Black Sabbath",8.91,"Wyatt Girard",1.98,0.2222
+4,"Black Sabbath",8.91,"François Tremblay",0.99,0.1111
+5,"Black Sabbath",8.91,"Hannah Schneider",0.99,0.1111
+6,"Black Sabbath",8.91,"Camille Bernard",0.99,0.1111
+1,"Gonzaguinha",8.91,"Alexandre Rocha",2.97,0.3333
+2,"Gonzaguinha",8.91,"Martha Silk",1.98,0.2222
+3,"Gonzaguinha",8.91,"Camille Bernard",1.98,0.2222
+4,"Gonzaguinha",8.91,"Enrique Muñoz",1.98,0.2222
+1,"Incognito",8.91,"Kathy Chase",2.97,0.3333
+2,"Incognito",8.91,"Astrid Gruber",1.98,0.2222
+3,"Incognito",8.91,"Madalena Sampaio",1.98,0.2222
+4,"Incognito",8.91,"Hugh O'Reilly",1.98,0.2222
+1,"Passengers",8.91,"Marc Dubois",2.97,0.3333
+2,"Passengers",8.91,"Leonie Köhler",1.98,0.2222
+3,"Passengers",8.91,"Eduardo Martins",1.98,0.2222
+4,"Passengers",8.91,"Kathy Chase",1.98,0.2222
+1,"Planet Hemp",8.91,"Alexandre Rocha",1.98,0.2222
+2,"Planet Hemp",8.91,"Victor Stevens",1.98,0.2222
+3,"Planet Hemp",8.91,"Edward Francis",1.98,0.2222
+4,"Planet Hemp",8.91,"Frank Ralston",0.99,0.1111
+5,"Planet Hemp",8.91,"Patrick Gray",0.99,0.1111
+6,"Planet Hemp",8.91,"Enrique Muñoz",0.99,0.1111
+1,"R.E.M. Feat. Kate Pearson",8.91,"Mark Philips",1.98,0.2222
+2,"R.E.M. Feat. Kate Pearson",8.91,"Camille Bernard",1.98,0.2222
+3,"R.E.M. Feat. Kate Pearson",8.91,"Stanisław Wójcik",1.98,0.2222
+4,"R.E.M. Feat. Kate Pearson",8.91,"Ellie Sullivan",0.99,0.1111
+5,"R.E.M. Feat. Kate Pearson",8.91,"Phil Hughes",0.99,0.1111
+6,"R.E.M. Feat. Kate Pearson",8.91,"Puja Srivastava",0.99,0.1111
+1,"Stevie Ray Vaughan & Double Trouble",8.91,"Johannes Van der Berg",3.96,0.4444
+2,"Stevie Ray Vaughan & Double Trouble",8.91,"Aaron Mitchell",1.98,0.2222
+3,"Stevie Ray Vaughan & Double Trouble",8.91,"Michelle Brooks",0.99,0.1111
+4,"Stevie Ray Vaughan & Double Trouble",8.91,"Hugh O'Reilly",0.99,0.1111
+5,"Stevie Ray Vaughan & Double Trouble",8.91,"Stanisław Wójcik",0.99,0.1111
+1,"Zeca Pagodinho",8.91,"Victor Stevens",2.97,0.3333
+2,"Zeca Pagodinho",8.91,"František Wichterlová",1.98,0.2222
+3,"Zeca Pagodinho",8.91,"Terhi Hämäläinen",1.98,0.2222
+4,"Zeca Pagodinho",8.91,"Ladislav Kovács",1.98,0.2222
+1,"Alanis Morissette",7.92,"Mark Philips",1.98,0.25
+2,"Alanis Morissette",7.92,"Heather Leacock",1.98,0.25
+3,"Alanis Morissette",7.92,"Ellie Sullivan",1.98,0.25
+4,"Alanis Morissette",7.92,"Phil Hughes",1.98,0.25
+1,"Black Label Society",7.92,"François Tremblay",1.98,0.25
+2,"Black Label Society",7.92,"Heather Leacock",1.98,0.25
+3,"Black Label Society",7.92,"John Gordon",1.98,0.25
+4,"Black Label Society",7.92,"Wyatt Girard",1.98,0.25
+1,"David Coverdale",7.92,"Victor Stevens",2.97,0.375
+2,"David Coverdale",7.92,"Alexandre Rocha",1.98,0.25
+3,"David Coverdale",7.92,"Enrique Muñoz",1.98,0.25
+4,"David Coverdale",7.92,"Camille Bernard",0.99,0.125
+1,"Falamansa",7.92,"Johannes Van der Berg",2.97,0.375
+2,"Falamansa",7.92,"Julia Barnett",1.98,0.25
+3,"Falamansa",7.92,"Diego Gutiérrez",1.98,0.25
+4,"Falamansa",7.92,"Jack Smith",0.99,0.125
+1,"Funk Como Le Gusta",7.92,"Jack Smith",1.98,0.25
+2,"Funk Como Le Gusta",7.92,"Fynn Zimmermann",1.98,0.25
+3,"Funk Como Le Gusta",7.92,"Diego Gutiérrez",1.98,0.25
+4,"Funk Como Le Gusta",7.92,"Luis Rojas",1.98,0.25
+1,"Godsmack",7.92,"Hannah Schneider",2.97,0.375
+2,"Godsmack",7.92,"Dan Miller",1.98,0.25
+3,"Godsmack",7.92,"Fynn Zimmermann",0.99,0.125
+4,"Godsmack",7.92,"Dominique Lefebvre",0.99,0.125
+5,"Godsmack",7.92,"Luis Rojas",0.99,0.125
+1,"House Of Pain",7.92,"Jennifer Peterson",2.97,0.375
+2,"House Of Pain",7.92,"Steve Murray",2.97,0.375
+3,"House Of Pain",7.92,"Isabelle Mercier",1.98,0.25
+1,"Jimi Hendrix",7.92,"Mark Philips",1.98,0.25
+2,"Jimi Hendrix",7.92,"João Fernandes",1.98,0.25
+3,"Jimi Hendrix",7.92,"Steve Murray",1.98,0.25
+4,"Jimi Hendrix",7.92,"Helena Holý",0.99,0.125
+5,"Jimi Hendrix",7.92,"Jennifer Peterson",0.99,0.125
+1,"Marisa Monte",7.92,"Fernanda Ramos",1.98,0.25
+2,"Marisa Monte",7.92,"Ellie Sullivan",1.98,0.25
+3,"Marisa Monte",7.92,"Emma Jones",1.98,0.25
+4,"Marisa Monte",7.92,"Phil Hughes",1.98,0.25
+1,"Men At Work",7.92,"Roberto Almeida",3.96,0.5
+2,"Men At Work",7.92,"Eduardo Martins",0.99,0.125
+3,"Men At Work",7.92,"Fernanda Ramos",0.99,0.125
+4,"Men At Work",7.92,"Ellie Sullivan",0.99,0.125
+5,"Men At Work",7.92,"Phil Hughes",0.99,0.125
+1,"Os Mutantes",7.92,"Martha Silk",2.97,0.375
+2,"Os Mutantes",7.92,"Camille Bernard",1.98,0.25
+3,"Os Mutantes",7.92,"Alexandre Rocha",0.99,0.125
+4,"Os Mutantes",7.92,"Dan Miller",0.99,0.125
+5,"Os Mutantes",7.92,"Puja Srivastava",0.99,0.125
+1,"Page & Plant",7.92,"Mark Taylor",2.97,0.375
+2,"Page & Plant",7.92,"Kathy Chase",1.98,0.25
+3,"Page & Plant",7.92,"Marc Dubois",1.98,0.25
+4,"Page & Plant",7.92,"Eduardo Martins",0.99,0.125
+1,"UB40",7.92,"Edward Francis",2.97,0.375
+2,"UB40",7.92,"Frank Harris",1.98,0.25
+3,"UB40",7.92,"Mark Taylor",1.98,0.25
+4,"UB40",7.92,"Terhi Hämäläinen",0.99,0.125
+1,"Alice In Chains",6.93,"Mark Philips",1.98,0.2857
+2,"Alice In Chains",6.93,"Wyatt Girard",1.98,0.2857
+3,"Alice In Chains",6.93,"Phil Hughes",1.98,0.2857
+4,"Alice In Chains",6.93,"Heather Leacock",0.99,0.1429
+1,"Buddy Guy",6.93,"Leonie Köhler",2.97,0.4286
+2,"Buddy Guy",6.93,"Ladislav Kovács",1.98,0.2857
+3,"Buddy Guy",6.93,"Helena Holý",0.99,0.1429
+4,"Buddy Guy",6.93,"John Gordon",0.99,0.1429
+1,"Def Leppard",6.93,"Tim Goyer",1.98,0.2857
+2,"Def Leppard",6.93,"Niklas Schröder",1.98,0.2857
+3,"Def Leppard",6.93,"Manoj Pareek",1.98,0.2857
+4,"Def Leppard",6.93,"Michelle Brooks",0.99,0.1429
+1,"JET",6.93,"Helena Holý",1.98,0.2857
+2,"JET",6.93,"Mark Philips",1.98,0.2857
+3,"JET",6.93,"Steve Murray",1.98,0.2857
+4,"JET",6.93,"João Fernandes",0.99,0.1429
+1,"Marcos Valle",6.93,"Leonie Köhler",1.98,0.2857
+2,"Marcos Valle",6.93,"Kathy Chase",1.98,0.2857
+3,"Marcos Valle",6.93,"Marc Dubois",1.98,0.2857
+4,"Marcos Valle",6.93,"Luís Gonçalves",0.99,0.1429
+1,"Mötley Crüe",6.93,"Martha Silk",1.98,0.2857
+2,"Mötley Crüe",6.93,"Aaron Mitchell",1.98,0.2857
+3,"Mötley Crüe",6.93,"Joakim Johansson",1.98,0.2857
+4,"Mötley Crüe",6.93,"Roberto Almeida",0.99,0.1429
+1,"O Rappa",6.93,"Jennifer Peterson",2.97,0.4286
+2,"O Rappa",6.93,"Bjørn Hansen",1.98,0.2857
+3,"O Rappa",6.93,"Isabelle Mercier",1.98,0.2857
+1,"Raimundos",6.93,"João Fernandes",1.98,0.2857
+2,"Raimundos",6.93,"Camille Bernard",1.98,0.2857
+3,"Raimundos",6.93,"Puja Srivastava",1.98,0.2857
+4,"Raimundos",6.93,"Dan Miller",0.99,0.1429
+1,"The Police",6.93,"Patrick Gray",1.98,0.2857
+2,"The Police",6.93,"Julia Barnett",1.98,0.2857
+3,"The Police",6.93,"Lucas Mancini",1.98,0.2857
+4,"The Police",6.93,"Daan Peeters",0.99,0.1429
+1,"BackBeat",5.94,"François Tremblay",1.98,0.3333
+2,"BackBeat",5.94,"Heather Leacock",1.98,0.3333
+3,"BackBeat",5.94,"John Gordon",0.99,0.1667
+4,"BackBeat",5.94,"Wyatt Girard",0.99,0.1667
+1,"Ed Motta",5.94,"Dan Miller",1.98,0.3333
+2,"Ed Motta",5.94,"Camille Bernard",1.98,0.3333
+3,"Ed Motta",5.94,"Dominique Lefebvre",0.99,0.1667
+4,"Ed Motta",5.94,"Puja Srivastava",0.99,0.1667
+1,"Jorge Ben",5.94,"Jennifer Peterson",1.98,0.3333
+2,"Jorge Ben",5.94,"João Fernandes",1.98,0.3333
+3,"Jorge Ben",5.94,"Mark Philips",0.99,0.1667
+4,"Jorge Ben",5.94,"Steve Murray",0.99,0.1667
+1,"Jota Quest",5.94,"Mark Philips",1.98,0.3333
+2,"Jota Quest",5.94,"Steve Murray",1.98,0.3333
+3,"Jota Quest",5.94,"Jennifer Peterson",0.99,0.1667
+4,"Jota Quest",5.94,"João Fernandes",0.99,0.1667
+1,"João Suplicy",5.94,"Jennifer Peterson",1.98,0.3333
+2,"João Suplicy",5.94,"João Fernandes",1.98,0.3333
+3,"João Suplicy",5.94,"Mark Philips",0.99,0.1667
+4,"João Suplicy",5.94,"Steve Murray",0.99,0.1667
+1,"Motörhead",5.94,"Joakim Johansson",1.98,0.3333
+2,"Motörhead",5.94,"Roberto Almeida",0.99,0.1667
+3,"Motörhead",5.94,"John Gordon",0.99,0.1667
+4,"Motörhead",5.94,"Martha Silk",0.99,0.1667
+5,"Motörhead",5.94,"Aaron Mitchell",0.99,0.1667
+1,"Mônica Marianno",5.94,"Roberto Almeida",1.98,0.3333
+2,"Mônica Marianno",5.94,"Martha Silk",1.98,0.3333
+3,"Mônica Marianno",5.94,"Aaron Mitchell",0.99,0.1667
+4,"Mônica Marianno",5.94,"Joakim Johansson",0.99,0.1667
+1,"Rush",5.94,"Kara Nielsen",1.98,0.3333
+2,"Rush",5.94,"Robert Brown",0.99,0.1667
+3,"Rush",5.94,"Dominique Lefebvre",0.99,0.1667
+4,"Rush",5.94,"Johannes Van der Berg",0.99,0.1667
+5,"Rush",5.94,"Stanisław Wójcik",0.99,0.1667
+1,"Velvet Revolver",5.94,"František Wichterlová",1.98,0.3333
+2,"Velvet Revolver",5.94,"Victor Stevens",0.99,0.1667
+3,"Velvet Revolver",5.94,"Hannah Schneider",0.99,0.1667
+4,"Velvet Revolver",5.94,"Terhi Hämäläinen",0.99,0.1667
+5,"Velvet Revolver",5.94,"Ladislav Kovács",0.99,0.1667
+1,"Vinícius De Moraes",5.94,"Victor Stevens",1.98,0.3333
+2,"Vinícius De Moraes",5.94,"Terhi Hämäläinen",1.98,0.3333
+3,"Vinícius De Moraes",5.94,"František Wichterlová",0.99,0.1667
+4,"Vinícius De Moraes",5.94,"Ladislav Kovács",0.99,0.1667
+1,"Accept",4.95,"Leonie Köhler",1.98,0.4
+2,"Accept",4.95,"Fernanda Ramos",0.99,0.2
+3,"Accept",4.95,"Ellie Sullivan",0.99,0.2
+4,"Accept",4.95,"Lucas Mancini",0.99,0.2
+1,"Cláudio Zoli",4.95,"Emma Jones",1.98,0.4
+2,"Cláudio Zoli",4.95,"Luís Gonçalves",0.99,0.2
+3,"Cláudio Zoli",4.95,"Kathy Chase",0.99,0.2
+4,"Cláudio Zoli",4.95,"Marc Dubois",0.99,0.2
+1,"Marillion",4.95,"Ellie Sullivan",1.98,0.4
+2,"Marillion",4.95,"Fernanda Ramos",0.99,0.2
+3,"Marillion",4.95,"Emma Jones",0.99,0.2
+4,"Marillion",4.95,"Phil Hughes",0.99,0.2
+1,"Paul D'Ianno",4.95,"Leonie Köhler",1.98,0.4
+2,"Paul D'Ianno",4.95,"Eduardo Martins",0.99,0.2
+3,"Paul D'Ianno",4.95,"Edward Francis",0.99,0.2
+4,"Paul D'Ianno",4.95,"Marc Dubois",0.99,0.2
+1,"Scorpions",4.95,"Jennifer Peterson",1.98,0.4
+2,"Scorpions",4.95,"Steve Murray",1.98,0.4
+3,"Scorpions",4.95,"João Fernandes",0.99,0.2
+1,"Terry Bozzio, Tony Levin & Steve Stevens",4.95,"Fernanda Ramos",0.99,0.2
+2,"Terry Bozzio, Tony Levin & Steve Stevens",4.95,"Michelle Brooks",0.99,0.2
+3,"Terry Bozzio, Tony Levin & Steve Stevens",4.95,"Niklas Schröder",0.99,0.2
+4,"Terry Bozzio, Tony Levin & Steve Stevens",4.95,"Emma Jones",0.99,0.2
+5,"Terry Bozzio, Tony Levin & Steve Stevens",4.95,"Manoj Pareek",0.99,0.2
+1,"Aquaman",3.98,"François Tremblay",1.99,0.5
+2,"Aquaman",3.98,"João Fernandes",1.99,0.5
+1,"Apocalyptica",3.96,"Mark Philips",1.98,0.5
+2,"Apocalyptica",3.96,"Heather Leacock",0.99,0.25
+3,"Apocalyptica",3.96,"Wyatt Girard",0.99,0.25
+1,"Billy Cobham",3.96,"François Tremblay",0.99,0.25
+2,"Billy Cobham",3.96,"Heather Leacock",0.99,0.25
+3,"Billy Cobham",3.96,"John Gordon",0.99,0.25
+4,"Billy Cobham",3.96,"Wyatt Girard",0.99,0.25
+1,"Chris Cornell",3.96,"Bjørn Hansen",1.98,0.5
+2,"Chris Cornell",3.96,"Frank Ralston",0.99,0.25
+3,"Chris Cornell",3.96,"Isabelle Mercier",0.99,0.25
+1,"Dennis Chambers",3.96,"Michelle Brooks",0.99,0.25
+2,"Dennis Chambers",3.96,"Tim Goyer",0.99,0.25
+3,"Dennis Chambers",3.96,"Niklas Schröder",0.99,0.25
+4,"Dennis Chambers",3.96,"Manoj Pareek",0.99,0.25
+1,"Frank Zappa & Captain Beefheart",3.96,"Luís Gonçalves",0.99,0.25
+2,"Frank Zappa & Captain Beefheart",3.96,"Leonie Köhler",0.99,0.25
+3,"Frank Zappa & Captain Beefheart",3.96,"Kathy Chase",0.99,0.25
+4,"Frank Zappa & Captain Beefheart",3.96,"Marc Dubois",0.99,0.25
+1,"Joe Satriani",3.96,"Mark Philips",0.99,0.25
+2,"Joe Satriani",3.96,"Jennifer Peterson",0.99,0.25
+3,"Joe Satriani",3.96,"João Fernandes",0.99,0.25
+4,"Joe Satriani",3.96,"Steve Murray",0.99,0.25
+1,"Pink Floyd",3.96,"Eduardo Martins",0.99,0.25
+2,"Pink Floyd",3.96,"Alexandre Rocha",0.99,0.25
+3,"Pink Floyd",3.96,"Edward Francis",0.99,0.25
+4,"Pink Floyd",3.96,"Enrique Muñoz",0.99,0.25
+1,"Temple of the Dog",3.96,"Frank Ralston",1.98,0.5
+2,"Temple of the Dog",3.96,"Bjørn Hansen",0.99,0.25
+3,"Temple of the Dog",3.96,"Isabelle Mercier",0.99,0.25
+1,"The Doors",3.96,"Daan Peeters",0.99,0.25
+2,"The Doors",3.96,"Tim Goyer",0.99,0.25
+3,"The Doors",3.96,"Patrick Gray",0.99,0.25
+4,"The Doors",3.96,"Lucas Mancini",0.99,0.25
+1,"Michael Tilson Thomas & San Francisco Symphony",2.97,"François Tremblay",1.98,0.6667
+2,"Michael Tilson Thomas & San Francisco Symphony",2.97,"Frank Ralston",0.99,0.3333
+1,"Academy of St. Martin in the Fields, Sir Neville Marriner & Thurston Dart",1.98,"Fernanda Ramos",0.99,0.5
+2,"Academy of St. Martin in the Fields, Sir Neville Marriner & Thurston Dart",1.98,"Marc Dubois",0.99,0.5
+1,"Berliner Philharmoniker & Herbert Von Karajan",1.98,"Astrid Gruber",1.98,1
+1,"Chicago Symphony Orchestra & Fritz Reiner",1.98,"Bjørn Hansen",0.99,0.5
+2,"Chicago Symphony Orchestra & Fritz Reiner",1.98,"Luis Rojas",0.99,0.5
+1,"Emerson String Quartet",1.98,"Fernanda Ramos",0.99,0.5
+2,"Emerson String Quartet",1.98,"Lucas Mancini",0.99,0.5
+1,"Equale Brass Ensemble, John Eliot Gardiner & Munich Monteverdi Orchestra and Choir",1.98,"Fernanda Ramos",0.99,0.5
+2,"Equale Brass Ensemble, John Eliot Gardiner & Munich Monteverdi Orchestra and Choir",1.98,"Isabelle Mercier",0.99,0.5
+1,"Eugene Ormandy",1.98,"Bjørn Hansen",0.99,0.5
+2,"Eugene Ormandy",1.98,"Ellie Sullivan",0.99,0.5
+1,"Academy of St. Martin in the Fields & Sir Neville Marriner",0.99,"Luís Gonçalves",0.99,1
+1,"Academy of St. Martin in the Fields, John Birch, Sir Neville Marriner & Sylvia McNair",0.99,"Frank Ralston",0.99,1
+1,"Adrian Leaper & Doreen de Feis",0.99,"Patrick Gray",0.99,1
+1,"Antal Doráti & London Symphony Orchestra",0.99,"François Tremblay",0.99,1
+1,"Berliner Philharmoniker & Hans Rosbaud",0.99,"Luís Gonçalves",0.99,1
+1,"Calexico",0.99,"Niklas Schröder",0.99,1
+1,"Dread Zeppelin",0.99,"Dominique Lefebvre",0.99,1
+1,"Edo de Waart & San Francisco Symphony",0.99,"Bjørn Hansen",0.99,1
+1,"Emanuel Ax, Eugene Ormandy & Philadelphia Orchestra",0.99,"Manoj Pareek",0.99,1
+1,"English Concert & Trevor Pinnock",0.99,"Bjørn Hansen",0.99,1
+1,"Felix Schmidt, London Symphony Orchestra & Rafael Frühbeck de Burgos",0.99,"François Tremblay",0.99,1
+1,"Göteborgs Symfoniker & Neeme Järvi",0.99,"Fernanda Ramos",0.99,1
+1,"Habib Koité and Bamada",0.99,"Bjørn Hansen",0.99,1
+1,"Julian Bream",0.99,"Isabelle Mercier",0.99,1
+1,"Kent Nagano and Orchestre de l'Opéra de Lyon",0.99,"Patrick Gray",0.99,1
+1,"Luciana Souza/Romero Lubambo",0.99,"Frank Ralston",0.99,1
+1,"Martin Roscoe",0.99,"Patrick Gray",0.99,1
+1,"Maurizio Pollini",0.99,"Frank Ralston",0.99,1
+1,"Michele Campanella",0.99,"Lucas Mancini",0.99,1
+1,"Orchestra of The Age of Enlightenment",0.99,"Manoj Pareek",0.99,1
+1,"Otto Klemperer & Philharmonia Orchestra",0.99,"Camille Bernard",0.99,1
+1,"Philharmonia Orchestra & Sir Neville Marriner",0.99,"Patrick Gray",0.99,1
+1,"Roger Norrington, London Classical Players",0.99,"Isabelle Mercier",0.99,1
+1,"Royal Philharmonic Orchestra & Sir Thomas Beecham",0.99,"Bjørn Hansen",0.99,1
+1,"Scholars Baroque Ensemble",0.99,"Frank Ralston",0.99,1
+1,"Sir Georg Solti & Wiener Philharmoniker",0.99,"Isabelle Mercier",0.99,1
+1,"The 12 Cellists of The Berlin Philharmonic",0.99,"Marc Dubois",0.99,1
+1,"The King's Singers",0.99,"Isabelle Mercier",0.99,1
+1,"The Posies",0.99,"Isabelle Mercier",0.99,1
+1,"Yehudi Menuhin",0.99,"Camille Bernard",0.99,1
+1,"Yo-Yo Ma",0.99,"Isabelle Mercier",0.99,1

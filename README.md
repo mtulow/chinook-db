@@ -9,59 +9,6 @@ The Chinook Database holds information about a music store. For this project, yo
 ---
 ---
 
-## Queries
-
-### 1. Top Genres
-
-#### What are the top genres in each country, state, zipcode, and city?
-
-| __Locations__ | __SQL File__ | __CSV File__ |
-| --------- | -------- | -------- |
-| `country` | [top_genres_by_country.sql](./data/sql/genres/top_genres_by_country.sql) | [top_genres_by_country.csv](./data/csv/genres/top_genres_by_country.csv) |
-| `country`, `city` | [top_genres_by_cc.sql](./data/sql/genres/top_genres_by_city.sql) | [top_genres_by_cc.csv](./data/csv/genres/top_genres_by_city.csv) |
-| `country`, `state`, `zipcode`, `city` | [top_genres_by_location.sql](./data/sql/genres/top_genres_by_location.sql) | [top_genres_by_location.csv](./data/csv/genres/top_genres_by_location.csv) |
-
-### 2. Top Artists
-
-#### Who are the top artists in each country, state, zipcode, and city?
-
-| __Locations__ | __SQL File__ | __CSV File__ |
-| --------- | -------- | -------- |
-| `country` | [top_artists_by_country.sql](./data/sql/artists/top_artists_by_country.sql) | [top_artists_by_country.csv](./data/csv/artists/top_artists_by_country.csv) |
-| `country`, `city` | [top_artists_by_cc.sql](./data/sql/artists/top_artists_by_cc.sql) | [top_artists_by_cc.csv](./data/csv/artists/top_artists_by_cc.csv) |
-| `country`, `state`, `zipcode`, `city` | [top_artists_by_location.sql](./data/sql/artists/top_artists_by_location.sql) | [top_artists_by_location.csv](./data/csv/artists/top_artists_by_location.csv) |
-
-### 3. Top Albums
-
-#### What are the top albums in each country, state, zipcode, and city?
-
-| __Locations__ | __SQL File__ | __CSV File__ |
-| --------- | -------- | -------- |
-| `country` | [top_albums_by_country.sql](./data/sql/albums/top_albums_by_country.sql) | [top_albums_by_country.csv](./data/csv/albums/top_albums_by_country.csv) |
-| `country`, `city` | [top_albums_by_cc.sql](./data/sql/albums/top_albums_by_cc.sql) | [top_albums_by_cc.csv](./data/csv/albums/top_albums_by_cc.csv) |
-| `country`, `state`, `zipcode`, `city` | [top_albums_by_location.sql](./data/sql/albums/top_albums_by_location.sql) | [top_albums_by_location.csv](./data/csv/albums/top_albums_by_location.csv) |
-
-### 4. Top Tracks
-
-#### What are the top performing tracks in each country, state, zipcode, and city?
-
-| __Locations__ | __SQL File__ | __CSV File__ |
-| --------- | -------- | -------- |
-| `country` | [top_tracks_by_country.sql](./data/sql/tracks/top_tracks_by_country.sql) | [top_tracks_by_country.csv](./data/csv/tracks/top_tracks_by_country.csv) |
-| `country`, `city` | [top_tracks_by_cc.sql](./data/sql/tracks/top_tracks_by_cc.sql) | [top_tracks_by_cc.csv](./data/csv/tracks/top_tracks_by_cc.csv) |
-| `country`, `state`, `zipcode`, `city` | [top_tracks_by_location.sql](./data/sql/tracks/top_tracks_by_location.sql) | [top_tracks_by_location.csv](./data/csv/tracks/top_tracks_by_location.csv) |
-
-### 5. Top Employees
-
-#### Who are the top performing employees?
-
-| __Locations__ | __SQL File__ | __CSV File__ |
-| --------- | -------- | -------- |
-|  | [top_performing_employees.sql](./data/sql/top_performing_employees.sql) | [top_performing_employees.csv](./data/csv/top_performing_employees.csv) |
-
----
----
-
 ## Tables
 
 ### Artist
@@ -107,8 +54,8 @@ Relationships:
 
 | __Column Name__ | __Description__ |
 | --- | --- |
-| MediaTypeId | Unique identifier for each media type |
-| Name | Name of the media type |
+| `MediaTypeId` | Unique identifier for each media type |
+| `Name` | Name of the media type |
 
 ### Playlist
 
